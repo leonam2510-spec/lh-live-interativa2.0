@@ -2,7 +2,7 @@
 <html lang="pt-BR" class="dark">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 <title>LH Live Interativa — Meus Jogos • Rumble Turbo Live</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
@@ -40,6 +40,47 @@ background-color: #090a0f;
 color: #f4f4f6;
 overflow-x: hidden;
 -webkit-tap-highlight-color: transparent;
+}
+html.stage-fullscreen-open,
+body.stage-fullscreen-open {
+width: 100%;
+height: 100%;
+overflow: hidden !important;
+overscroll-behavior: none;
+}
+body.stage-fullscreen-open {
+min-height: 100vh;
+min-height: 100dvh;
+padding: 0 !important;
+}
+#game-stage-wrapper.stage-fullscreen-mode {
+position: fixed !important;
+inset: 0 !important;
+z-index: 9999 !important;
+width: 100vw !important;
+max-width: none !important;
+height: 100vh !important;
+height: 100dvh !important;
+aspect-ratio: auto !important;
+margin: 0 !important;
+border: 0 !important;
+border-radius: 0 !important;
+box-shadow: none !important;
+}
+#game-stage-wrapper.stage-fullscreen-mode #stage-hud-top {
+top: max(0.75rem, env(safe-area-inset-top, 0px));
+left: max(0.75rem, env(safe-area-inset-left, 0px));
+right: max(0.75rem, env(safe-area-inset-right, 0px));
+}
+#game-stage-wrapper.stage-fullscreen-mode #stage-bottom-controls {
+bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+left: max(0.75rem, env(safe-area-inset-left, 0px));
+right: max(0.75rem, env(safe-area-inset-right, 0px));
+}
+#game-stage-wrapper.stage-fullscreen-mode #btn-close-fullscreen {
+top: max(1rem, env(safe-area-inset-top, 0px));
+right: max(1rem, env(safe-area-inset-right, 0px));
+z-index: 10001;
 }
 .lh-plan-gradient {
 background: linear-gradient(165deg, rgba(0, 210, 255, 0.22) 0%, rgba(18, 20, 29, 0.96) 48%, rgba(255, 42, 109, 0.14) 100%);
@@ -913,7 +954,7 @@ class="hidden fixed top-4 right-4 z-50 px-4 py-2 rounded-full bg-black/85 border
 ✕ Sair da Tela Cheia
 </button>
 <canvas id="race-canvas" onclick="handleStageTap()" class="w-full h-full block cursor-pointer"></canvas>
-<div class="absolute top-3 left-3 right-3 flex items-start justify-between pointer-events-none z-10">
+<div id="stage-hud-top" class="absolute top-3 left-3 right-3 flex items-start justify-between pointer-events-none z-10">
 <div class="bg-black/75 backdrop-blur-md border border-lh-cyan/40 rounded-2xl px-3 py-2">
 <div class="flex items-center gap-1.5">
 <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
@@ -947,7 +988,7 @@ class="hidden fixed top-4 right-4 z-50 px-4 py-2 rounded-full bg-black/85 border
 <p class="text-[11px] text-zinc-300 animate-pulse">Próxima largada em instantes...</p>
 </div>
 </div>
-<div class="absolute bottom-3 left-3 right-3 flex flex-col items-center gap-2 z-10">
+<div id="stage-bottom-controls" class="absolute bottom-3 left-3 right-3 flex flex-col items-center gap-2 z-10">
 <button onclick="handleStageTap()"
 class="px-4 py-1.5 rounded-full bg-lh-coral/90 hover:bg-lh-coral text-white font-arcade text-xs uppercase tracking-wider shadow-lg active:scale-95 transition">
 👆 Dar Tap-Tap (+Turbo)
@@ -1396,21 +1437,45 @@ showToast('Live desconectada. Modo simulador disponível.', 'info');
 function openFullscreenStage() {
 switchBottomTab('jogo');
 const wrapper = document.getElementById('game-stage-wrapper');
-const closeBtn = document.getElementById('btn-close-fullscreen');
-wrapper.classList.remove('max-w-[370px]', 'rounded-[30px]', 'border-4');
-wrapper.classList.add('fixed', 'inset-0', 'z-50', 'max-w-md', 'mx-auto', 'h-screen', 'rounded-none', 'border-0');
-closeBtn.classList.remove('hidden');
+if (!wrapper) return;
+setStageFullscreenMode(true);
 markStepDone('step-check-3');
-setTimeout(resizeCanvas, 50);
+window.scrollTo(0, 0);
+if (typeof wrapper.requestFullscreen === 'function') {
+const fullscreenRequest = wrapper.requestFullscreen();
+if (fullscreenRequest && typeof fullscreenRequest.catch === 'function') {
+fullscreenRequest.catch(() => {});
+}
+}
 }
 function closeFullscreenStage() {
 const wrapper = document.getElementById('game-stage-wrapper');
-const closeBtn = document.getElementById('btn-close-fullscreen');
-wrapper.classList.add('max-w-[370px]', 'rounded-[30px]', 'border-4');
-wrapper.classList.remove('fixed', 'inset-0', 'z-50', 'max-w-md', 'mx-auto', 'h-screen', 'rounded-none', 'border-0');
-closeBtn.classList.add('hidden');
-setTimeout(resizeCanvas, 50);
+if (!wrapper) return;
+setStageFullscreenMode(false);
+if (document.fullscreenElement === wrapper && typeof document.exitFullscreen === 'function') {
+const exitRequest = document.exitFullscreen();
+if (exitRequest && typeof exitRequest.catch === 'function') {
+exitRequest.catch(() => {});
 }
+}
+}
+function setStageFullscreenMode(enabled) {
+const wrapper = document.getElementById('game-stage-wrapper');
+const closeBtn = document.getElementById('btn-close-fullscreen');
+if (!wrapper || !closeBtn) return;
+wrapper.classList.toggle('stage-fullscreen-mode', enabled);
+document.documentElement.classList.toggle('stage-fullscreen-open', enabled);
+document.body.classList.toggle('stage-fullscreen-open', enabled);
+closeBtn.classList.toggle('hidden', !enabled);
+requestAnimationFrame(() => requestAnimationFrame(resizeCanvas));
+}
+document.addEventListener('fullscreenchange', () => {
+const wrapper = document.getElementById('game-stage-wrapper');
+if (document.fullscreenElement !== wrapper && document.body.classList.contains('stage-fullscreen-open')) {
+setStageFullscreenMode(false);
+}
+resizeCanvas();
+});
 function copyOverlayLink() {
 const url = window.location.href.startsWith('http')
 ? window.location.href
@@ -2139,6 +2204,9 @@ startNewRace(true);
 });
 }
 window.addEventListener('resize', resizeCanvas);
+if (window.visualViewport) {
+window.visualViewport.addEventListener('resize', resizeCanvas);
+}
 window.onload = function () {
 resizeCanvas();
 startNewRace(false);
