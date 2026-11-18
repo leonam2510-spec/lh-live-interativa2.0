@@ -6,7 +6,6 @@
 <title>LH Live Interativa — Meus Jogos • Rumble Turbo Live</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
-<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Russo+One&display=swap" rel="stylesheet" />
@@ -998,12 +997,6 @@ class="flex flex-col items-center justify-center gap-1 text-zinc-400 hover:text-
 </div>
 </nav>
 <script>
-let cloudSocket = null;
-try {
-if (typeof io !== 'undefined' && window.location.protocol.startsWith('http')) {
-cloudSocket = io();
-}
-} catch (e) {}
 const appState = {
 activeBottomTab: 'controles',
 isProPlan: false,
@@ -1346,18 +1339,7 @@ showToast('Plano LH Live PRO ativado! Conexão ao vivo liberada.', 'success');
 }
 function toggleTikTokConnection() {
 initAudio();
-const rawUser = document.getElementById('input-tiktok-user').value.trim().replace(/^@/, '') || 'lhliveoficial';
-appState.tiktokUser = rawUser;
-if (cloudSocket && cloudSocket.connected) {
-if (!appState.isLiveConnected) {
-showToast(`Conectando à live real de @${rawUser}...`, 'info');
-cloudSocket.emit('connect_tiktok', { username: rawUser });
-} else {
-cloudSocket.emit('disconnect_tiktok');
-}
-return;
-}
-applyConnectionUIState(!appState.isLiveConnected, rawUser);
+showToast('A conexão real do TikTok requer um servidor Node.js. O modo simulador continua disponível.', 'info');
 }
 function applyConnectionUIState(connected, rawUser) {
 appState.isLiveConnected = connected;
@@ -1640,12 +1622,9 @@ addRecentGiftItem(user.name, giftLabel, coinValue);
 addChatMessage(user.name, `enviou ${qty}x ${giftLabel} (+${coinValue} moedas)! 🎁`, true);
 updateMetricsUI();
 }
-function testAction(action, isFromRemote = false) {
+function testAction(action) {
 initAudio();
 markStepDone('step-check-2');
-if (!isFromRemote && cloudSocket && cloudSocket.connected) {
-cloudSocket.emit('sync_command', { type: 'testAction', action });
-}
 if (action === 'join') {
 const r = spawnRacer();
 appState.commentsCount++;
@@ -2084,60 +2063,6 @@ updateMetricsUI();
 }
 }
 }, 1000);
-if (cloudSocket) {
-cloudSocket.on('tiktok_status', (data) => {
-if (data.username) {
-document.getElementById('input-tiktok-user').value = `@${data.username}`;
-appState.tiktokUser = data.username;
-}
-applyConnectionUIState(Boolean(data.connected), data.username || appState.tiktokUser);
-});
-cloudSocket.on('tiktok_error', (data) => {
-showToast(data.message || 'Erro ao conectar no TikTok Live.', 'info');
-});
-cloudSocket.on('tiktok_chat', (data) => {
-const car = spawnRacer(data.nickname);
-appState.commentsCount++;
-appState.responsesCount++;
-addChatMessage(data.nickname, data.comment || 'entrou na corrida! 🏎️');
-if (car) updateMetricsUI();
-});
-cloudSocket.on('tiktok_like', (data) => {
-const car = spawnRacer(data.nickname);
-if (car && car.freezeTimer <= 0) {
-const boost = Math.min(25, data.likeCount || 1);
-car.taps += boost;
-car.progress += boost * 2.2;
-car.nitroTimer = Math.max(car.nitroTimer, 25);
-}
-appState.responsesCount++;
-updateMetricsUI();
-});
-cloudSocket.on('tiktok_gift', (data) => {
-const coins = data.totalCoins || 1;
-const qty = data.repeatCount || 1;
-if (coins >= 300) {
-applyPowerUp('tornado', qty, data.nickname);
-} else if (coins >= 20) {
-applyPowerUp('freeze', qty, data.nickname);
-} else {
-applyPowerUp('nitro', qty, data.nickname);
-}
-});
-cloudSocket.on('tiktok_follow', (data) => {
-const car = spawnRacer(data.nickname);
-if (car) car.nitroTimer = 95;
-addChatMessage(data.nickname, 'seguiu a live e ganhou turbo! ⭐', true);
-showPowerBanner(`⭐ NOVO SEGUIDOR: ${data.nickname}`, 'Ganhou arrancada extra!');
-});
-cloudSocket.on('remote_command', (payload) => {
-if (payload.type === 'testAction') {
-testAction(payload.action, true);
-} else if (payload.type === 'restartRace') {
-startNewRace(true);
-}
-});
-}
 window.addEventListener('resize', resizeCanvas);
 window.onload = function () {
 resizeCanvas();
