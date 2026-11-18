@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Russo+One&display=swap" rel="stylesheet" />
-​<script>
+<script>
 tailwind.config = {
 darkMode: 'class',
 theme: {
@@ -34,20 +34,20 @@ coral: '#ff2a6d',
 }
 };
 </script>
-​<style>
+<style>
 body {
 background-color: #090a0f;
 color: #f4f4f6;
 overflow-x: hidden;
 -webkit-tap-highlight-color: transparent;
 }
-​.lh-plan-gradient {
+.lh-plan-gradient {
 background: linear-gradient(165deg, rgba(0, 210, 255, 0.22) 0%, rgba(18, 20, 29, 0.96) 48%, rgba(255, 42, 109, 0.14) 100%);
 }
-​.lh-center-btn-glow {
+.lh-center-btn-glow {
 box-shadow: 0 0 22px rgba(0, 210, 255, 0.45), 0 4px 14px rgba(0, 0, 0, 0.6);
 }
-​.checkerboard-bg {
+.checkerboard-bg {
 background-color: #12141d;
 background-image:
 linear-gradient(45deg, #1b1e2b 25%, transparent 25%),
@@ -57,7 +57,7 @@ linear-gradient(-45deg, transparent 75%, #1b1e2b 75%);
 background-size: 20px 20px;
 background-position: 0 0, 0 10px, 10px -10px, -10px 0;
 }
-​input[type="range"].lh-slider {
+input[type="range"].lh-slider {
 -webkit-appearance: none;
 appearance: none;
 height: 6px;
@@ -75,14 +75,14 @@ background: #00d2ff;
 cursor: pointer;
 box-shadow: 0 0 10px rgba(0, 210, 255, 0.7);
 }
-​.no-scrollbar::-webkit-scrollbar {
+.no-scrollbar::-webkit-scrollbar {
 display: none;
 }
 .no-scrollbar {
 -ms-overflow-style: none;
 scrollbar-width: none;
 }
-​@keyframes popIn {
+@keyframes popIn {
 0% { transform: scale(0.85) translateY(8px); opacity: 0; }
 100% { transform: scale(1) translateY(0); opacity: 1; }
 }
@@ -92,8 +92,8 @@ animation: popIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 </style>
 </head>
 <body class="min-h-screen flex flex-col font-sans antialiased pb-24">
-​<div id="toast-container" class="fixed top-16 left-1/2 -translate-x-1/2 z-50 flex flex-col gap-2 pointer-events-none w-[92%] max-w-sm"></div>
-​<header id="top-header" class="sticky top-0 z-40 bg-[#090a0f]/95 backdrop-blur-md border-b border-lh-border">
+<div id="toast-container" class="fixed top-16 left-1/2 -translate-x-1/2 z-50 flex flex-col gap-2 pointer-events-none w-[92%] max-w-sm"></div>
+<header id="top-header" class="sticky top-0 z-40 bg-[#090a0f]/95 backdrop-blur-md border-b border-lh-border">
 <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
 <a href="#inicio" onclick="switchTopNav('meus-jogos'); return false;" class="flex items-center gap-2 select-none">
 <svg class="w-36 h-10" viewBox="0 0 210 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,14 +115,14 @@ animation: popIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 <path d="M181 28H185M183 26V30M189 27H189.01M191 29H191.01" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" />
 </svg>
 </a>
-​<div class="flex items-center gap-3">
+<div class="flex items-center gap-3">
 <button onclick="showToast('Tema escuro otimizado para transmissões ao vivo!', 'info')" aria-label="Alternar tema"
 class="w-9 h-9 rounded-full hover:bg-lh-card flex items-center justify-center text-zinc-300 transition">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 <circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
 </svg>
 </button>
-​<button onclick="showToast('1 novidade: Integração Spotify & YouTube Music liberada!', 'info')" aria-label="Notificações"
+<button onclick="showToast('1 novidade: Integração Spotify & YouTube Music liberada!', 'info')" aria-label="Notificações"
 class="relative w-9 h-9 rounded-full hover:bg-lh-card flex items-center justify-center text-zinc-300 transition">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
@@ -131,7 +131,7 @@ class="relative w-9 h-9 rounded-full hover:bg-lh-card flex items-center justify-
 1
 </span>
 </button>
-​<button onclick="switchBottomTab('ajustes')" class="flex items-center gap-1.5 pl-1 pr-2 py-1 rounded-full hover:bg-lh-card transition">
+<button onclick="switchBottomTab('ajustes')" class="flex items-center gap-1.5 pl-1 pr-2 py-1 rounded-full hover:bg-lh-card transition">
 <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-lh-cyan to-lh-coral p-[2px]">
 <div class="w-full h-full rounded-full bg-lh-card flex items-center justify-center text-xs font-extrabold text-white">
 LH
@@ -143,41 +143,41 @@ LH
 </button>
 </div>
 </div>
-​<div class="max-w-5xl mx-auto px-2 border-t border-lh-border/60 overflow-x-auto no-scrollbar">
+<div class="max-w-5xl mx-auto px-2 border-t border-lh-border/60 overflow-x-auto no-scrollbar">
 <div class="flex items-center justify-between sm:justify-start sm:gap-6 min-w-max px-2 py-2">
 <button onclick="switchTopNav('inicio')" id="topnav-inicio" class="topnav-btn flex flex-col items-center gap-1 px-3 py-1 text-zinc-400 hover:text-white transition">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
 <span class="text-[11px] font-medium">Início</span>
 </button>
-​<button onclick="switchTopNav('meus-jogos')" id="topnav-meus-jogos" class="topnav-btn flex flex-col items-center gap-1 px-3 py-1 text-lh-cyan transition">
+<button onclick="switchTopNav('meus-jogos')" id="topnav-meus-jogos" class="topnav-btn flex flex-col items-center gap-1 px-3 py-1 text-lh-cyan transition">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
 <span class="text-[11px] font-bold">Meus jogos</span>
 </button>
-​<button onclick="switchTopNav('planos')" id="topnav-planos" class="topnav-btn flex flex-col items-center gap-1 px-3 py-1 text-zinc-400 hover:text-white transition">
+<button onclick="switchTopNav('planos')" id="topnav-planos" class="topnav-btn flex flex-col items-center gap-1 px-3 py-1 text-zinc-400 hover:text-white transition">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg>
 <span class="text-[11px] font-medium">Planos</span>
 </button>
-​<button onclick="switchTopNav('afiliados')" id="topnav-afiliados" class="topnav-btn flex flex-col items-center gap-1 px-3 py-1 text-zinc-400 hover:text-white transition">
+<button onclick="switchTopNav('afiliados')" id="topnav-afiliados" class="topnav-btn flex flex-col items-center gap-1 px-3 py-1 text-zinc-400 hover:text-white transition">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
 <span class="text-[11px] font-medium">Afiliados</span>
 </button>
-​<button onclick="scrollToFaq()" id="topnav-ajuda" class="topnav-btn flex flex-col items-center gap-1 px-3 py-1 text-zinc-400 hover:text-white transition">
+<button onclick="scrollToFaq()" id="topnav-ajuda" class="topnav-btn flex flex-col items-center gap-1 px-3 py-1 text-zinc-400 hover:text-white transition">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
 <span class="text-[11px] font-medium">Ajuda</span>
 </button>
 </div>
 </div>
 </header>
-​<div class="max-w-5xl w-full mx-auto px-4 pt-4 flex-1">
+<div class="max-w-5xl w-full mx-auto px-4 pt-4 flex-1">
 <div class="mb-4">
 <button onclick="switchTopNav('inicio')" class="inline-flex items-center gap-1.5 text-sm text-zinc-400 hover:text-white transition">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
 <span>Meus jogos</span>
 </button>
 </div>
-​<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
 <div class="lg:col-span-7 space-y-4">
-​<div id="tab-view-controles" class="space-y-4">
+<div id="tab-view-controles" class="space-y-4">
 <div class="flex items-start gap-4">
 <div onclick="switchBottomTab('jogo')" class="cursor-pointer w-20 h-32 rounded-2xl overflow-hidden border border-lh-border bg-gradient-to-b from-amber-900 via-zinc-900 to-zinc-950 shrink-0 relative shadow-lg group">
 <div class="absolute inset-0 flex flex-col items-center justify-between p-1.5 text-center">
@@ -186,7 +186,7 @@ LH
 <span class="text-[8px] font-bold text-cyan-300">RUMBLE</span>
 </div>
 </div>
-​<div class="flex-1 min-w-0">
+<div class="flex-1 min-w-0">
 <div class="flex items-center gap-1.5 text-lh-cyan text-xs font-bold uppercase tracking-wider mb-1">
 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49"/></svg>
 <span>MEU ESTÚDIO</span>
@@ -199,15 +199,15 @@ Modo teste: configure e use o simulador à vontade. Para ligar a live de verdade
 </p>
 </div>
 </div>
-​<div id="promo-plan-card" class="lh-plan-gradient border border-lh-cyan/30 rounded-3xl p-5 shadow-xl">
+<div id="promo-plan-card" class="lh-plan-gradient border border-lh-cyan/30 rounded-3xl p-5 shadow-xl">
 <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-lh-cyan/15 border border-lh-cyan/30 text-lh-cyan text-xs font-semibold mb-3">
 <span>✨</span>
 <span>Plano LH Live • todos os jogos</span>
 </div>
-​<h2 class="text-2xl font-extrabold text-white leading-tight mb-4">
+<h2 class="text-2xl font-extrabold text-white leading-tight mb-4">
 Deixe sua live interativa hoje
 </h2>
-​<ul class="space-y-2.5 text-xs sm:text-sm text-zinc-200 mb-5">
+<ul class="space-y-2.5 text-xs sm:text-sm text-zinc-200 mb-5">
 <li class="flex items-start gap-2.5">
 <span class="text-lh-cyan font-bold mt-0.5">✓</span>
 <span>3 jogos: <strong>Rumble Turbo Live</strong>, Jangada do Caos e Mascote IA</span>
@@ -221,12 +221,12 @@ Deixe sua live interativa hoje
 <span>Ligar na sua live do TikTok de verdade</span>
 </li>
 </ul>
-​<button onclick="activateProDemo()" id="btn-activate-plan"
+<button onclick="activateProDemo()" id="btn-activate-plan"
 class="w-full py-3 rounded-2xl bg-lh-cyan hover:brightness-110 text-[#090a0f] font-extrabold text-sm transition shadow-lg shadow-cyan-500/20">
 Assinar Plano LH Live (Liberar Live Real)
 </button>
 </div>
-​<div id="live-status-banner" class="bg-lh-card border border-lh-border rounded-2xl p-4 flex items-center gap-3.5">
+<div id="live-status-banner" class="bg-lh-card border border-lh-border rounded-2xl p-4 flex items-center gap-3.5">
 <span id="live-status-dot" class="w-4 h-4 rounded-full bg-zinc-600 shrink-0"></span>
 <div>
 <p id="live-status-title" class="text-sm font-extrabold text-white">
@@ -237,7 +237,7 @@ Abra a live no TikTok e clique em "Conectar live" (passo 4).
 </p>
 </div>
 </div>
-​<div class="bg-lh-card border border-lh-border rounded-2xl overflow-hidden">
+<div class="bg-lh-card border border-lh-border rounded-2xl overflow-hidden">
 <button onclick="toggleAccordion('how-to-connect-body', 'how-to-connect-arrow')"
 class="w-full px-4 py-3.5 flex items-center justify-between text-left hover:bg-lh-cardHover transition">
 <span class="text-xs sm:text-sm font-bold text-white flex items-center gap-2">
@@ -260,7 +260,7 @@ class="w-full px-4 py-3.5 flex items-center justify-between text-left hover:bg-l
 </div>
 </div>
 </div>
-​<div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3.5">
+<div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3.5">
 <div class="flex flex-wrap items-center gap-2">
 <span id="pill-connection-state" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-lh-bg border border-lh-border text-xs font-semibold text-zinc-400">
 <span class="w-2 h-2 rounded-full bg-zinc-500"></span>
@@ -271,7 +271,7 @@ class="w-full px-4 py-3.5 flex items-center justify-between text-left hover:bg-l
 <span>Modo teste • sem plano</span>
 </span>
 </div>
-​<div class="flex items-center justify-between gap-2">
+<div class="flex items-center justify-between gap-2">
 <h3 class="text-base font-extrabold text-white leading-snug">
 Como colocar o jogo na sua live
 </h3>
@@ -281,14 +281,14 @@ class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-lh-cyan/10 b
 <span>Ajuda e tutorial</span>
 </button>
 </div>
-​<button onclick="switchBottomTab('jogo')"
+<button onclick="switchBottomTab('jogo')"
 class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-lh-cyan to-sky-500 hover:brightness-110 text-[#090a0f] font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 transition active:scale-[0.99]">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
 <rect x="2" y="6" width="20" height="12" rx="4"/><path d="M6 12h4m-2-2v4m7-3h.01M18 13h.01"/>
 </svg>
 <span>Ver o jogo</span>
 </button>
-​<div class="grid grid-cols-2 gap-2.5">
+<div class="grid grid-cols-2 gap-2.5">
 <button onclick="scrollToElement('card-simulador')"
 class="relative bg-lh-bg hover:bg-lh-cardHover border border-lh-border rounded-2xl p-3.5 flex flex-col items-center justify-center text-center transition">
 <span class="absolute top-2.5 left-2.5 w-5 h-5 rounded-full bg-lh-cyan text-[#090a0f] text-[11px] font-extrabold flex items-center justify-center">1</span>
@@ -296,21 +296,21 @@ class="relative bg-lh-bg hover:bg-lh-cardHover border border-lh-border rounded-2
 <span class="text-xs font-bold text-white">Testar</span>
 <span class="text-[11px] text-zinc-500">Simulador</span>
 </button>
-​<button onclick="openFullscreenStage()"
+<button onclick="openFullscreenStage()"
 class="relative bg-lh-bg hover:bg-lh-cardHover border border-lh-border rounded-2xl p-3.5 flex flex-col items-center justify-center text-center transition">
 <span class="absolute top-2.5 left-2.5 w-5 h-5 rounded-full bg-lh-cyan/20 text-lh-cyan border border-lh-cyan/40 text-[11px] font-extrabold flex items-center justify-center">2</span>
 <span class="text-lg text-lh-cyan mb-1">⛶</span>
 <span class="text-xs font-bold text-white">Tela cheia</span>
 <span class="text-[11px] text-zinc-500">Live pelo celular</span>
 </button>
-​<button onclick="copyOverlayLink()"
+<button onclick="copyOverlayLink()"
 class="relative bg-lh-bg hover:bg-lh-cardHover border border-lh-border rounded-2xl p-3.5 flex flex-col items-center justify-center text-center transition">
 <span class="absolute top-2.5 left-2.5 w-5 h-5 rounded-full bg-lh-cyan/20 text-lh-cyan border border-lh-cyan/40 text-[11px] font-extrabold flex items-center justify-center">3</span>
 <span class="text-lg text-lh-cyan mb-1">📋</span>
 <span class="text-xs font-bold text-white">Copiar link</span>
 <span class="text-[11px] text-zinc-500">OBS / TikTok Studio</span>
 </button>
-​<button onclick="toggleTikTokConnection()"
+<button onclick="toggleTikTokConnection()"
 class="relative bg-lh-bg hover:bg-lh-cardHover border border-lh-border rounded-2xl p-3.5 flex flex-col items-center justify-center text-center transition">
 <span class="absolute top-2.5 left-2.5 w-5 h-5 rounded-full bg-lh-cyan/20 text-lh-cyan border border-lh-cyan/40 text-[11px] font-extrabold flex items-center justify-center">4</span>
 <span class="text-lg text-lh-cyan mb-1">📡</span>
@@ -319,30 +319,30 @@ class="relative bg-lh-bg hover:bg-lh-cardHover border border-lh-border rounded-2
 </button>
 </div>
 </div>
-​<div id="card-conexao" class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3.5">
+<div id="card-conexao" class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3.5">
 <div class="flex items-center gap-2 text-sm font-bold text-white">
 <span class="text-lh-cyan">📡</span>
 <span>Conexão e controles</span>
 </div>
-​<div class="flex items-center justify-between text-xs">
+<div class="flex items-center justify-between text-xs">
 <span class="text-zinc-400 font-medium">TikTok</span>
 <span id="feed-status-label" class="text-zinc-400 font-semibold">Feed desconectado</span>
 </div>
-​<div>
+<div>
 <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Usuário TikTok</label>
 <input id="input-tiktok-user" type="text" placeholder="@seuusuario" value="@lhliveoficial"
 class="w-full bg-lh-bg border border-lh-border rounded-2xl px-3.5 py-3 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-lh-cyan transition" />
 </div>
-​<div id="test-mode-notice" class="p-3 rounded-2xl bg-lh-cyan/10 border border-lh-cyan/25 text-xs text-zinc-200 leading-relaxed">
+<div id="test-mode-notice" class="p-3 rounded-2xl bg-lh-cyan/10 border border-lh-cyan/25 text-xs text-zinc-200 leading-relaxed">
 Modo teste: assine o plano (lá em cima) para ligar na sua live de verdade.
 </div>
-​<button onclick="toggleTikTokConnection()" id="btn-connect-tiktok"
+<button onclick="toggleTikTokConnection()" id="btn-connect-tiktok"
 class="w-full py-3.5 rounded-2xl bg-lh-cyan/20 hover:bg-lh-cyan/30 border border-lh-cyan/40 text-lh-cyan font-extrabold text-sm flex items-center justify-center gap-2 transition">
 <span>📡</span>
 <span id="btn-connect-tiktok-text">Conectar TikTok</span>
 </button>
 </div>
-​<div id="card-simulador" class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3.5">
+<div id="card-simulador" class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3.5">
 <div>
 <div class="flex items-center gap-2 text-sm font-bold text-white">
 <span class="text-lh-cyan">🧪</span>
@@ -352,7 +352,7 @@ class="w-full py-3.5 rounded-2xl bg-lh-cyan/20 hover:bg-lh-cyan/30 border border
 Público de mentira com comentários, presentes e curtidas. Não gasta créditos.
 </p>
 </div>
-​<div>
+<div>
 <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Movimento do público</label>
 <select id="select-crowd-mode" onchange="updateCrowdMode()"
 class="w-full bg-lh-bg border border-lh-border rounded-2xl px-3.5 py-3 text-sm text-white focus:outline-none focus:border-lh-cyan">
@@ -361,31 +361,31 @@ class="w-full bg-lh-bg border border-lh-border rounded-2xl px-3.5 py-3 text-sm t
 <option value="pausado">Pausado</option>
 </select>
 </div>
-​<button onclick="toggleSimulatorRunning()" id="btn-toggle-simulator"
+<button onclick="toggleSimulatorRunning()" id="btn-toggle-simulator"
 class="w-full py-3 rounded-2xl bg-lh-bg hover:bg-lh-cardHover border border-lh-border text-sm font-bold text-white transition">
 Pausar simulador
 </button>
 </div>
-​<div class="space-y-2.5">
+<div class="space-y-2.5">
 <button onclick="startNewRace(true)"
 class="w-full py-3.5 px-4 rounded-2xl bg-lh-card hover:bg-lh-cardHover border border-lh-border text-sm font-bold text-white flex items-center justify-center gap-2 transition">
 <span>↻</span>
 <span>Reiniciar o jogo</span>
 </button>
-​<button onclick="toggleMuteVoice()" id="btn-mute-voice"
+<button onclick="toggleMuteVoice()" id="btn-mute-voice"
 class="w-full py-3.5 px-4 rounded-2xl bg-lh-card hover:bg-lh-cardHover border border-lh-border text-sm font-bold text-white flex items-center justify-center gap-2 transition">
 <span id="icon-mute-voice">🔊</span>
 <span id="label-mute-voice">Mutar personagem</span>
 </button>
-​<button onclick="togglePauseGame()" id="btn-pause-game"
+<button onclick="togglePauseGame()" id="btn-pause-game"
 class="w-full py-3.5 px-4 rounded-2xl bg-lh-card hover:bg-lh-cardHover border border-lh-border text-sm font-bold text-white flex items-center justify-center gap-2 transition">
 <span id="icon-pause-game">⏸</span>
 <span id="label-pause-game">Pausar jogo</span>
 </button>
 </div>
-​<div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3">
+<div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3">
 <h3 class="text-sm font-bold text-white">Enviar presente de teste</h3>
-​<div>
+<div>
 <select id="select-test-gift"
 class="w-full bg-lh-bg border border-lh-border rounded-2xl px-3.5 py-3 text-sm text-white focus:outline-none focus:border-lh-cyan">
 <option value="nitro">🎁 Rosa (1 moeda) — Nitro Turbo 🔥</option>
@@ -394,17 +394,17 @@ class="w-full bg-lh-bg border border-lh-border rounded-2xl px-3.5 py-3 text-sm t
 <option value="oil">🎁 Casquinha (1 moeda) — Óleo no Líder 🛢️</option>
 </select>
 </div>
-​<div>
+<div>
 <label class="block text-xs font-semibold text-zinc-400 mb-1">Quantidade</label>
 <input id="input-gift-qty" type="number" min="1" max="50" value="1"
 class="w-full bg-lh-bg border border-lh-border rounded-2xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-lh-cyan" />
 </div>
-​<button onclick="sendSelectedTestGift()"
+<button onclick="sendSelectedTestGift()"
 class="w-full py-3 rounded-2xl bg-lh-bg hover:bg-lh-cardHover border border-lh-border text-sm font-bold text-zinc-200 flex items-center justify-center gap-2 transition">
 <span>🎁</span>
 <span>Enviar presente</span>
 </button>
-​<div class="pt-2 border-t border-lh-border/70 space-y-2">
+<div class="pt-2 border-t border-lh-border/70 space-y-2">
 <p class="text-xs font-bold text-white">Informações do jogo</p>
 <div class="bg-lh-bg border border-lh-border rounded-xl px-3 py-2 flex items-center justify-between text-xs">
 <span class="text-zinc-400">Agora <span class="text-zinc-600">(?)</span></span>
@@ -420,12 +420,12 @@ class="w-full py-3 rounded-2xl bg-lh-bg hover:bg-lh-cardHover border border-lh-b
 </div>
 </div>
 </div>
-​<div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3">
+<div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3">
 <div class="flex items-center gap-1.5 text-sm font-bold text-white">
 <span>Pad de efeitos</span>
 <span class="w-4 h-4 rounded-full border border-zinc-600 text-[10px] text-zinc-400 flex items-center justify-center">?</span>
 </div>
-​<div class="grid grid-cols-2 gap-2.5">
+<div class="grid grid-cols-2 gap-2.5">
 <button onclick="triggerEffectPad('fogos')" class="bg-lh-bg hover:bg-lh-cardHover border border-lh-border rounded-2xl py-2.5 px-3.5 text-xs font-semibold text-white flex items-center gap-2.5 transition active:scale-95">
 <span>🎆</span><span>Fogos</span>
 </button>
@@ -458,53 +458,53 @@ class="w-full py-3 rounded-2xl bg-lh-bg hover:bg-lh-cardHover border border-lh-b
 </button>
 </div>
 </div>
-​<div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3">
+<div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3">
 <div>
 <h3 class="text-sm font-bold text-white">Ações de teste</h3>
 <p class="text-xs text-zinc-400">Testes não gastam créditos de IA.</p>
 </div>
-​<div class="grid grid-cols-2 gap-2.5">
+<div class="grid grid-cols-2 gap-2.5">
 <button onclick="testAction('join')"
 class="bg-[#0284c7] hover:brightness-110 text-white rounded-2xl p-3.5 text-left flex items-center gap-2.5 font-bold text-xs shadow transition active:scale-95">
 <span class="text-base">🧪</span>
 <span>Alguém entra na corrida</span>
 </button>
-​<button onclick="testAction('cheap_gift')"
+<button onclick="testAction('cheap_gift')"
 class="bg-[#ec4899] hover:brightness-110 text-white rounded-2xl p-3.5 text-left flex items-center gap-2.5 font-bold text-xs shadow transition active:scale-95">
 <span class="text-base">🧪</span>
 <span>Presente barato</span>
 </button>
-​<button onclick="testAction('expensive_gift')"
+<button onclick="testAction('expensive_gift')"
 class="bg-[#f59e0b] hover:brightness-110 text-white rounded-2xl p-3.5 text-left flex items-center gap-2.5 font-bold text-xs shadow transition active:scale-95">
 <span class="text-base">🧪</span>
 <span>Presente caro</span>
 </button>
-​<button onclick="testAction('follow')"
+<button onclick="testAction('follow')"
 class="bg-[#10b981] hover:brightness-110 text-white rounded-2xl p-3.5 text-left flex items-center gap-2.5 font-bold text-xs shadow transition active:scale-95">
 <span class="text-base">🧪</span>
 <span>Alguém segue</span>
 </button>
-​<button onclick="testAction('likes')"
+<button onclick="testAction('likes')"
 class="bg-[#3b82f6] hover:brightness-110 text-white rounded-2xl p-3.5 text-left flex items-center gap-2.5 font-bold text-xs shadow transition active:scale-95">
 <span class="text-base">🧪</span>
 <span>Chuva de curtidas (Tap-Tap)</span>
 </button>
-​<button onclick="testAction('comment')"
+<button onclick="testAction('comment')"
 class="bg-[#ef4444] hover:brightness-110 text-white rounded-2xl p-3.5 text-left flex items-center gap-2.5 font-bold text-xs shadow transition active:scale-95">
 <span class="text-base">🧪</span>
 <span>Comentário (balão)</span>
 </button>
-​<button onclick="testAction('crowd')"
+<button onclick="testAction('crowd')"
 class="bg-[#06b6d4] hover:brightness-110 text-[#090a0f] rounded-2xl p-3.5 text-left flex items-center gap-2.5 font-extrabold text-xs shadow transition active:scale-95">
 <span class="text-base">🧪</span>
 <span>Muita gente chegando</span>
 </button>
 </div>
-​<p class="text-[11px] text-zinc-500">
+<p class="text-[11px] text-zinc-500">
 Clique e veja na prévia. Passe o mouse para saber o que cada um faz.
 </p>
 </div>
-​<div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-4">
+<div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-4">
 <div class="grid grid-cols-3 text-center pb-3 border-b border-lh-border">
 <div>
 <p id="stat-comments" class="text-xl font-extrabold text-white">0</p>
@@ -519,7 +519,7 @@ Clique e veja na prévia. Passe o mouse para saber o que cada um faz.
 <p class="text-[11px] text-zinc-400">Moedas</p>
 </div>
 </div>
-​<div class="space-y-1 text-xs">
+<div class="space-y-1 text-xs">
 <div class="flex items-center justify-between text-zinc-300">
 <span class="flex items-center gap-1.5 font-mono">
 <span>⏱</span>
@@ -529,7 +529,7 @@ Clique e veja na prévia. Passe o mouse para saber o que cada um faz.
 </div>
 <p class="text-zinc-400">Mais enviado: <span id="most-sent-gift" class="text-white font-semibold">—</span></p>
 </div>
-​<div class="pt-2 border-t border-lh-border/70">
+<div class="pt-2 border-t border-lh-border/70">
 <div class="flex items-center justify-between text-xs font-bold mb-2">
 <span class="text-white">Meta de moedas</span>
 <span id="coin-goal-pct" class="text-zinc-400">0%</span>
@@ -539,7 +539,7 @@ Clique e veja na prévia. Passe o mouse para saber o que cada um faz.
 </div>
 <p id="coin-goal-text" class="text-[11px] text-zinc-400 mt-1.5">0 / 1.000 moedas</p>
 </div>
-​<div class="pt-2 border-t border-lh-border/70">
+<div class="pt-2 border-t border-lh-border/70">
 <h4 class="text-xs font-bold text-white flex items-center gap-1.5 mb-2">
 <span class="text-lh-cyan">🏆</span>
 <span>Ranking de presentes</span>
@@ -548,25 +548,25 @@ Clique e veja na prévia. Passe o mouse para saber o que cada um faz.
 <p>O primeiro presente abre o ranking.</p>
 </div>
 </div>
-​<div class="pt-2 border-t border-lh-border/70">
+<div class="pt-2 border-t border-lh-border/70">
 <h4 class="text-xs font-bold text-white mb-2">Últimos presentes</h4>
 <div id="recent-gifts-list" class="text-xs text-zinc-400 space-y-1.5">
 <p>Nenhum presente recebido nesta sessão.</p>
 </div>
 </div>
-​<button onclick="copySessionSummary()"
+<button onclick="copySessionSummary()"
 class="w-full py-2.5 rounded-2xl bg-lh-bg hover:bg-lh-cardHover border border-lh-border text-xs font-bold text-white flex items-center justify-center gap-2 transition">
 <span>📋</span>
 <span>Copiar resumo da sessão</span>
 </button>
-​<div class="pt-2 border-t border-lh-border/70">
+<div class="pt-2 border-t border-lh-border/70">
 <h4 class="text-xs font-bold text-white mb-2">Chat da live</h4>
 <div id="live-chat-feed" class="bg-lh-bg border border-lh-border rounded-2xl p-3 max-h-40 overflow-y-auto space-y-1.5 text-xs text-zinc-400">
 <p class="italic">Comentários e presentes aparecem aqui quando conectar ou simular.</p>
 </div>
 </div>
 </div>
-​<div id="faq-section" class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-4">
+<div id="faq-section" class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-4">
 <div>
 <h3 class="text-sm font-bold text-white mb-2.5">Primeiros passos</h3>
 <ul class="space-y-2 text-xs text-zinc-300">
@@ -588,13 +588,13 @@ class="w-full py-2.5 rounded-2xl bg-lh-bg hover:bg-lh-cardHover border border-lh
 </li>
 </ul>
 </div>
-​<div class="pt-3 border-t border-lh-border space-y-2">
+<div class="pt-3 border-t border-lh-border space-y-2">
 <div class="flex items-center gap-1.5 text-sm font-bold text-white">
 <span class="text-lh-cyan">❓</span>
 <span>Dúvidas frequentes</span>
 </div>
 <p class="text-xs text-zinc-400 pb-1">Toque na pergunta para ver o passo a passo.</p>
-​<div class="space-y-2">
+<div class="space-y-2">
 <div class="bg-lh-bg border border-lh-border rounded-2xl overflow-hidden">
 <button onclick="toggleAccordion('faq-1', 'faq-arr-1')" class="w-full px-3.5 py-3 flex items-center justify-between text-left text-xs font-semibold text-white">
 <span>A live fica "esperando" ou não conecta</span>
@@ -604,7 +604,7 @@ class="w-full py-2.5 rounded-2xl bg-lh-bg hover:bg-lh-cardHover border border-lh
 Inicie primeiro a transmissão ao vivo no aplicativo do TikTok e só depois clique em "Conectar TikTok" aqui no painel.
 </div>
 </div>
-​<div class="bg-lh-bg border border-lh-border rounded-2xl overflow-hidden">
+<div class="bg-lh-bg border border-lh-border rounded-2xl overflow-hidden">
 <button onclick="toggleAccordion('faq-2', 'faq-arr-2')" class="w-full px-3.5 py-3 flex items-center justify-between text-left text-xs font-semibold text-white">
 <span>A música do Spotify ou YouTube Music não sai na live</span>
 <span id="faq-arr-2" class="text-zinc-400">⌄</span>
@@ -613,7 +613,7 @@ Inicie primeiro a transmissão ao vivo no aplicativo do TikTok e só depois cliq
 Vá na aba <strong>Ajustes → Música</strong>, conecte sua playlist do Spotify ou YouTube Music e clique em "Tocar".
 </div>
 </div>
-​<div class="bg-lh-bg border border-lh-border rounded-2xl overflow-hidden">
+<div class="bg-lh-bg border border-lh-border rounded-2xl overflow-hidden">
 <button onclick="toggleAccordion('faq-3', 'faq-arr-3')" class="w-full px-3.5 py-3 flex items-center justify-between text-left text-xs font-semibold text-white">
 <span>A tela fica pequena / não fica tela cheia no celular</span>
 <span id="faq-arr-3" class="text-zinc-400">⌄</span>
@@ -622,7 +622,7 @@ Vá na aba <strong>Ajustes → Música</strong>, conecte sua playlist do Spotify
 Toque no botão <strong>Tela cheia (Passo 2)</strong> para expandir o jogo em formato vertical 9:16 preenchendo a tela toda.
 </div>
 </div>
-​<div class="bg-lh-bg border border-lh-border rounded-2xl overflow-hidden">
+<div class="bg-lh-bg border border-lh-border rounded-2xl overflow-hidden">
 <button onclick="toggleAccordion('faq-4', 'faq-arr-4')" class="w-full px-3.5 py-3 flex items-center justify-between text-left text-xs font-semibold text-white">
 <span>Como fazer live pelo celular</span>
 <span id="faq-arr-4" class="text-zinc-400">⌄</span>
@@ -635,12 +635,12 @@ No TikTok Mobile, escolha a opção "Live de Jogos Móveis" (Espelhamento de Tel
 </div>
 </div>
 </div>
-​<div id="tab-view-ajustes" class="hidden space-y-4">
+<div id="tab-view-ajustes" class="hidden space-y-4">
 <div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3">
 <p class="text-[11px] font-extrabold uppercase tracking-wider text-zinc-400">
 ESCOLHA O QUE QUER AJUSTAR
 </p>
-​<div class="grid grid-cols-2 gap-2.5">
+<div class="grid grid-cols-2 gap-2.5">
 <button onclick="selectSettingSection('pista')" id="set-cat-pista"
 class="set-cat-btn bg-lh-bg border border-lh-border rounded-2xl p-3 text-left flex items-center gap-3 transition">
 <span class="text-lg">🏁</span>
@@ -649,7 +649,7 @@ class="set-cat-btn bg-lh-bg border border-lh-border rounded-2xl p-3 text-left fl
 <p class="text-[11px] text-zinc-500 truncate">Circuito, câmera e fundo</p>
 </div>
 </button>
-​<button onclick="selectSettingSection('interacao')" id="set-cat-interacao"
+<button onclick="selectSettingSection('interacao')" id="set-cat-interacao"
 class="set-cat-btn bg-lh-bg border border-lh-border rounded-2xl p-3 text-left flex items-center gap-3 transition">
 <span class="text-lg">✨</span>
 <div class="min-w-0">
@@ -657,7 +657,7 @@ class="set-cat-btn bg-lh-bg border border-lh-border rounded-2xl p-3 text-left fl
 <p class="text-[11px] text-zinc-500 truncate">Quem joga e filtros</p>
 </div>
 </button>
-​<button onclick="selectSettingSection('alertas')" id="set-cat-alertas"
+<button onclick="selectSettingSection('alertas')" id="set-cat-alertas"
 class="set-cat-btn bg-lh-bg border border-lh-border rounded-2xl p-3 text-left flex items-center gap-3 transition">
 <span class="text-lg">🔔</span>
 <div class="min-w-0">
@@ -665,7 +665,7 @@ class="set-cat-btn bg-lh-bg border border-lh-border rounded-2xl p-3 text-left fl
 <p class="text-[11px] text-zinc-500 truncate">Avisos na tela</p>
 </div>
 </button>
-​<button onclick="selectSettingSection('widgets')" id="set-cat-widgets"
+<button onclick="selectSettingSection('widgets')" id="set-cat-widgets"
 class="set-cat-btn bg-lh-bg border border-lh-border rounded-2xl p-3 text-left flex items-center gap-3 transition">
 <span class="text-lg">🎛️</span>
 <div class="min-w-0">
@@ -673,7 +673,7 @@ class="set-cat-btn bg-lh-bg border border-lh-border rounded-2xl p-3 text-left fl
 <p class="text-[11px] text-zinc-500 truncate">Itens na tela</p>
 </div>
 </button>
-​<button onclick="selectSettingSection('musica')" id="set-cat-musica"
+<button onclick="selectSettingSection('musica')" id="set-cat-musica"
 class="set-cat-btn bg-lh-cyan/15 border-2 border-lh-cyan rounded-2xl p-3 text-left flex items-center gap-3 transition">
 <span class="text-lg text-lh-cyan">🎵</span>
 <div class="min-w-0">
@@ -681,7 +681,7 @@ class="set-cat-btn bg-lh-cyan/15 border-2 border-lh-cyan rounded-2xl p-3 text-le
 <p class="text-[11px] text-lh-cyan truncate">Spotify & YT Music</p>
 </div>
 </button>
-​<button onclick="selectSettingSection('tiktok')" id="set-cat-tiktok"
+<button onclick="selectSettingSection('tiktok')" id="set-cat-tiktok"
 class="set-cat-btn bg-lh-bg border border-lh-border rounded-2xl p-3 text-left flex items-center gap-3 transition">
 <span class="text-lg font-bold text-zinc-300">@</span>
 <div class="min-w-0">
@@ -691,7 +691,7 @@ class="set-cat-btn bg-lh-bg border border-lh-border rounded-2xl p-3 text-left fl
 </button>
 </div>
 </div>
-​<div id="settings-panel-musica" class="settings-subpanel space-y-4">
+<div id="settings-panel-musica" class="settings-subpanel space-y-4">
 <div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3.5">
 <div>
 <h3 class="text-base font-extrabold text-white flex items-center gap-2">
@@ -702,17 +702,17 @@ class="set-cat-btn bg-lh-bg border border-lh-border rounded-2xl p-3 text-left fl
 Conecte sua conta ou cole o link de uma playlist/música para tocar ao vivo de fundo na corrida.
 </p>
 </div>
-​<div class="grid grid-cols-2 gap-2.5">
+<div class="grid grid-cols-2 gap-2.5">
 <button onclick="selectMusicService('spotify')" id="btn-service-spotify"
 class="py-3 px-3 rounded-2xl border-2 border-[#1DB954] bg-[#1DB954]/15 text-white text-xs font-extrabold flex items-center justify-center gap-2 transition">
 <span>Spotify</span>
 </button>
-​<button onclick="selectMusicService('ytmusic')" id="btn-service-ytmusic"
+<button onclick="selectMusicService('ytmusic')" id="btn-service-ytmusic"
 class="py-3 px-3 rounded-2xl border border-lh-border bg-lh-bg hover:bg-lh-cardHover text-zinc-300 text-xs font-extrabold flex items-center justify-center gap-2 transition">
 <span>YouTube Music</span>
 </button>
 </div>
-​<div id="music-connect-spotify" class="bg-lh-bg border border-[#1DB954]/30 rounded-2xl p-3.5 space-y-3">
+<div id="music-connect-spotify" class="bg-lh-bg border border-[#1DB954]/30 rounded-2xl p-3.5 space-y-3">
 <div class="flex items-center justify-between">
 <div class="flex items-center gap-2">
 <span class="w-2.5 h-2.5 rounded-full bg-[#1DB954]"></span>
@@ -723,7 +723,7 @@ class="px-3 py-1 rounded-full bg-[#1DB954] text-black text-[11px] font-extrabold
 Conectar Conta
 </button>
 </div>
-​<div>
+<div>
 <label class="block text-[11px] font-semibold text-zinc-400 mb-1">
 Cole o link da Playlist ou Música do Spotify:
 </label>
@@ -738,7 +738,7 @@ Carregar
 </button>
 </div>
 </div>
-​<div class="flex flex-wrap gap-1.5">
+<div class="flex flex-wrap gap-1.5">
 <button onclick="setSpotifyPreset('37i9dQZF1DWWY64wDtewQt', 'Phonk & Corrida Turbo')"
 class="px-2.5 py-1 rounded-lg bg-lh-card border border-lh-border text-[11px] text-zinc-300 hover:border-[#1DB954] transition">
 🏎️ Phonk Corrida
@@ -752,7 +752,7 @@ class="px-2.5 py-1 rounded-lg bg-lh-card border border-lh-border text-[11px] tex
 ⚡ Eletrônica
 </button>
 </div>
-​<div id="spotify-embed-container" class="rounded-xl overflow-hidden border border-lh-border bg-black">
+<div id="spotify-embed-container" class="rounded-xl overflow-hidden border border-lh-border bg-black">
 <iframe id="spotify-iframe" style="border-radius:12px"
 src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWY64wDtewQt?utm_source=generator&theme=0"
 width="100%" height="152" frameBorder="0" allowfullscreen=""
@@ -760,7 +760,7 @@ allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-pictur
 </iframe>
 </div>
 </div>
-​<div id="music-connect-ytmusic" class="hidden bg-lh-bg border border-[#FF0033]/30 rounded-2xl p-3.5 space-y-3">
+<div id="music-connect-ytmusic" class="hidden bg-lh-bg border border-[#FF0033]/30 rounded-2xl p-3.5 space-y-3">
 <div class="flex items-center justify-between">
 <div class="flex items-center gap-2">
 <span class="w-2.5 h-2.5 rounded-full bg-[#FF0033]"></span>
@@ -771,7 +771,7 @@ class="px-3 py-1 rounded-full bg-[#FF0033] text-white text-[11px] font-extrabold
 Conectar Conta
 </button>
 </div>
-​<div>
+<div>
 <label class="block text-[11px] font-semibold text-zinc-400 mb-1">
 Cole o link da Música ou Playlist do YouTube Music:
 </label>
@@ -786,7 +786,7 @@ Carregar
 </button>
 </div>
 </div>
-​<div class="flex flex-wrap gap-1.5">
+<div class="flex flex-wrap gap-1.5">
 <button onclick="setYtPreset('jfKfPfyJRdk', 'Lofi Beats 24/7 Sem Copyright')"
 class="px-2.5 py-1 rounded-lg bg-lh-card border border-lh-border text-[11px] text-zinc-300 hover:border-[#FF0033] transition">
 🎧 Beats 24/7 Live
@@ -796,7 +796,7 @@ class="px-2.5 py-1 rounded-lg bg-lh-card border border-lh-border text-[11px] tex
 🏎️ Synthwave Rumble
 </button>
 </div>
-​<div id="ytmusic-embed-container" class="rounded-xl overflow-hidden border border-lh-border bg-black">
+<div id="ytmusic-embed-container" class="rounded-xl overflow-hidden border border-lh-border bg-black">
 <iframe id="ytmusic-iframe" width="100%" height="152"
 src="https://www.youtube.com/embed/jfKfPfyJRdk?enablejsapi=1"
 title="YouTube Music Player" frameborder="0"
@@ -805,12 +805,12 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 </div>
 </div>
 </div>
-​<div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-4">
+<div class="bg-lh-card border border-lh-border rounded-3xl p-4 space-y-4">
 <div>
 <h3 class="text-base font-extrabold text-white">Música de fundo</h3>
 <p class="text-xs text-zinc-400">Vale para todos os jogos.</p>
 </div>
-​<div class="bg-lh-bg border border-lh-border rounded-2xl p-3.5 space-y-3">
+<div class="bg-lh-bg border border-lh-border rounded-2xl p-3.5 space-y-3">
 <div class="flex flex-wrap gap-2">
 <button onclick="controlBgMusic('play')" id="btn-music-play"
 class="px-4 py-2 rounded-xl bg-lh-card hover:bg-lh-cardHover border border-lh-border text-xs font-bold text-white flex items-center gap-1.5 transition">
@@ -829,18 +829,18 @@ class="px-4 py-2 rounded-xl bg-lh-card hover:bg-lh-cardHover border border-lh-bo
 <span>⏹</span><span>Parar</span>
 </button>
 </div>
-​<p id="music-now-playing" class="text-[11px] text-zinc-400 leading-relaxed">
+<p id="music-now-playing" class="text-[11px] text-zinc-400 leading-relaxed">
 Vale na prévia e na live ao mesmo tempo. Só uma música toca por vez.
 </p>
 </div>
-​<div>
+<div>
 <div class="flex items-center justify-between text-xs font-bold mb-2">
 <span class="text-white">Volume da música</span>
 <span id="music-volume-label" class="text-zinc-300">40%</span>
 </div>
 <input type="range" min="0" max="100" value="40" oninput="updateMusicVolume(this.value)" class="w-full lh-slider" />
 </div>
-​<div class="bg-lh-bg border border-lh-border rounded-2xl p-3.5 space-y-2.5">
+<div class="bg-lh-bg border border-lh-border rounded-2xl p-3.5 space-y-2.5">
 <h4 class="text-sm font-bold text-white">Som dos efeitos</h4>
 <p class="text-[11px] text-zinc-400">
 Fogos, sirene, risadas, fanfarra e sons de alerta. 0 = sem som.
@@ -853,7 +853,7 @@ Fogos, sirene, risadas, fanfarra e sons de alerta. 0 = sem som.
 </div>
 </div>
 </div>
-​<div id="settings-panel-pista" class="settings-subpanel hidden bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3">
+<div id="settings-panel-pista" class="settings-subpanel hidden bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3">
 <h3 class="text-sm font-bold text-white">🏁 Pista & Visual do Jogo</h3>
 <div class="grid grid-cols-3 gap-2">
 <button onclick="setTrackTheme('canyon')" id="btn-theme-canyon" class="py-2.5 px-2 rounded-2xl border-2 border-lh-cyan bg-lh-cyan/15 text-xs font-bold text-white">
@@ -867,7 +867,7 @@ Fogos, sirene, risadas, fanfarra e sons de alerta. 0 = sem som.
 </button>
 </div>
 </div>
-​<div id="settings-panel-outros" class="settings-subpanel hidden bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3">
+<div id="settings-panel-outros" class="settings-subpanel hidden bg-lh-card border border-lh-border rounded-3xl p-4 space-y-3">
 <h3 id="settings-outros-title" class="text-sm font-bold text-white">Configurações Rápidas</h3>
 <label class="flex items-center justify-between p-3 rounded-2xl bg-lh-bg border border-lh-border text-xs">
 <span>Permitir qualquer espectador entrar comentando</span>
@@ -883,7 +883,7 @@ Fogos, sirene, risadas, fanfarra e sons de alerta. 0 = sem som.
 </label>
 </div>
 </div>
-​<div id="tab-view-extra" class="hidden space-y-4">
+<div id="tab-view-extra" class="hidden space-y-4">
 <div class="bg-lh-card border border-lh-border rounded-3xl p-5 space-y-4">
 <div class="flex items-center justify-between">
 <h2 id="extra-view-title" class="text-lg font-extrabold text-white">Catálogo de Jogos LH Live</h2>
@@ -894,26 +894,26 @@ Fogos, sirene, risadas, fanfarra e sons de alerta. 0 = sem som.
 <div id="extra-view-content" class="space-y-3 text-xs text-zinc-300"></div>
 </div>
 </div>
-​<footer class="pt-4 pb-8 text-center space-y-4">
+<footer class="pt-4 pb-8 text-center space-y-4">
 <div class="flex items-center justify-center gap-5 text-xs font-semibold text-lh-cyan">
 <button onclick="switchTopNav('meus-jogos')" class="hover:underline flex items-center gap-1">
 <span>🎮</span><span>Meus jogos</span>
 </button>
 <button onclick="switchTopNav('inicio')" class="hover:underline">Sobre os jogos</button>
 </div>
-​<p class="text-[11px] text-zinc-500">
+<p class="text-[11px] text-zinc-500">
 © 2026 LH Live Interativa. Todos os direitos reservados.
 </p>
 </footer>
 </div>
-​<div id="game-stage-column" class="hidden lg:flex lg:col-span-5 flex-col items-center lg:sticky lg:top-20">
+<div id="game-stage-column" class="hidden lg:flex lg:col-span-5 flex-col items-center lg:sticky lg:top-20">
 <div id="game-stage-wrapper" class="relative w-full max-w-[370px] aspect-[9/16] rounded-[30px] border-4 border-lh-border bg-[#090a0f] overflow-hidden shadow-2xl select-none">
 <button id="btn-close-fullscreen" onclick="closeFullscreenStage()"
 class="hidden fixed top-4 right-4 z-50 px-4 py-2 rounded-full bg-black/85 border border-white/20 text-xs font-bold text-white backdrop-blur">
 ✕ Sair da Tela Cheia
 </button>
-​<canvas id="race-canvas" onclick="handleStageTap()" class="w-full h-full block cursor-pointer"></canvas>
-​<div class="absolute top-3 left-3 right-3 flex items-start justify-between pointer-events-none z-10">
+<canvas id="race-canvas" onclick="handleStageTap()" class="w-full h-full block cursor-pointer"></canvas>
+<div class="absolute top-3 left-3 right-3 flex items-start justify-between pointer-events-none z-10">
 <div class="bg-black/75 backdrop-blur-md border border-lh-cyan/40 rounded-2xl px-3 py-2">
 <div class="flex items-center gap-1.5">
 <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
@@ -925,20 +925,20 @@ class="hidden fixed top-4 right-4 z-50 px-4 py-2 rounded-full bg-black/85 border
 <span id="hud-racers" class="font-arcade text-sm text-amber-400">0 carros</span>
 </div>
 </div>
-​<div id="hud-ranking-box" class="bg-black/75 backdrop-blur-md border border-white/15 rounded-2xl px-3 py-2 max-w-[155px]">
+<div id="hud-ranking-box" class="bg-black/75 backdrop-blur-md border border-white/15 rounded-2xl px-3 py-2 max-w-[155px]">
 <p class="text-[10px] font-arcade uppercase text-amber-400 mb-1">🏁 Líderes</p>
 <ul id="hud-ranking-list" class="space-y-0.5 text-[11px] text-white">
 <li class="text-zinc-400">Largada...</li>
 </ul>
 </div>
 </div>
-​<div id="stage-powerup-banner" class="hidden absolute top-24 left-3 right-3 z-20 pointer-events-none">
+<div id="stage-powerup-banner" class="hidden absolute top-24 left-3 right-3 z-20 pointer-events-none">
 <div id="stage-powerup-card" class="animate-pop bg-gradient-to-r from-lh-cyan/95 to-lh-coral/95 border-2 border-white/40 rounded-2xl p-2.5 text-center shadow-2xl">
 <p id="stage-powerup-title" class="font-arcade text-sm text-white uppercase drop-shadow">🌪️ TORNADO NA PISTA!</p>
 <p id="stage-powerup-sub" class="text-[11px] font-bold text-white/90 mt-0.5">@usuario varreu os rivais!</p>
 </div>
 </div>
-​<div id="stage-podium-overlay" class="hidden absolute inset-0 z-30 bg-black/85 backdrop-blur-md flex flex-col items-center justify-center p-5 text-center">
+<div id="stage-podium-overlay" class="hidden absolute inset-0 z-30 bg-black/85 backdrop-blur-md flex flex-col items-center justify-center p-5 text-center">
 <div class="animate-pop w-full max-w-[270px]">
 <span class="text-4xl block mb-1">🏁🏆🏁</span>
 <h3 class="font-arcade text-2xl text-white">PÓDIO DA CORRIDA</h3>
@@ -947,7 +947,7 @@ class="hidden fixed top-4 right-4 z-50 px-4 py-2 rounded-full bg-black/85 border
 <p class="text-[11px] text-zinc-300 animate-pulse">Próxima largada em instantes...</p>
 </div>
 </div>
-​<div class="absolute bottom-3 left-3 right-3 flex flex-col items-center gap-2 z-10">
+<div class="absolute bottom-3 left-3 right-3 flex flex-col items-center gap-2 z-10">
 <button onclick="handleStageTap()"
 class="px-4 py-1.5 rounded-full bg-lh-coral/90 hover:bg-lh-coral text-white font-arcade text-xs uppercase tracking-wider shadow-lg active:scale-95 transition">
 👆 Dar Tap-Tap (+Turbo)
@@ -960,17 +960,17 @@ class="px-4 py-1.5 rounded-full bg-lh-coral/90 hover:bg-lh-coral text-white font
 </div>
 </div>
 </div>
-​<button onclick="testAction('expensive_gift')" aria-label="Efeito Rápido"
+<button onclick="testAction('expensive_gift')" aria-label="Efeito Rápido"
 class="fixed left-3 bottom-20 z-30 w-11 h-11 rounded-full bg-lh-card/90 border border-lh-cyan/40 text-lh-cyan flex items-center justify-center shadow-xl backdrop-blur hover:scale-105 transition">
 ✨
 </button>
-​<button onclick="scrollToElement('live-chat-feed')" aria-label="Chat da Live"
+<button onclick="scrollToElement('live-chat-feed')" aria-label="Chat da Live"
 class="fixed right-3 bottom-20 z-30 w-12 h-12 rounded-full bg-gradient-to-tr from-lh-cyan to-sky-500 text-[#090a0f] flex items-center justify-center shadow-xl hover:scale-105 transition">
 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
 </svg>
 </button>
-​<nav id="bottom-nav-bar" class="fixed bottom-0 left-0 right-0 z-40 bg-[#0d0f17]/95 backdrop-blur-md border-t border-lh-border h-16 px-6">
+<nav id="bottom-nav-bar" class="fixed bottom-0 left-0 right-0 z-40 bg-[#0d0f17]/95 backdrop-blur-md border-t border-lh-border h-16 px-6">
 <div class="max-w-md mx-auto h-full flex items-center justify-between relative">
 <button onclick="switchBottomTab('controles')" id="bnav-controles"
 class="flex flex-col items-center justify-center gap-1 text-lh-cyan transition w-20">
@@ -979,7 +979,7 @@ class="flex flex-col items-center justify-center gap-1 text-lh-cyan transition w
 </svg>
 <span class="text-[11px] font-bold">Controles</span>
 </button>
-​<button onclick="switchBottomTab('jogo')" id="bnav-jogo"
+<button onclick="switchBottomTab('jogo')" id="bnav-jogo"
 class="flex flex-col items-center justify-center -mt-6 transition">
 <div id="bnav-jogo-circle" class="w-14 h-14 rounded-full bg-gradient-to-tr from-lh-cyan to-sky-500 text-[#090a0f] flex items-center justify-center lh-center-btn-glow border-4 border-[#090a0f]">
 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
@@ -988,7 +988,7 @@ class="flex flex-col items-center justify-center -mt-6 transition">
 </div>
 <span id="bnav-jogo-label" class="text-[11px] font-bold text-zinc-300 mt-1">Jogo</span>
 </button>
-​<button onclick="switchBottomTab('ajustes')" id="bnav-ajustes"
+<button onclick="switchBottomTab('ajustes')" id="bnav-ajustes"
 class="flex flex-col items-center justify-center gap-1 text-zinc-400 hover:text-white transition w-20">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
@@ -997,14 +997,14 @@ class="flex flex-col items-center justify-center gap-1 text-zinc-400 hover:text-
 </button>
 </div>
 </nav>
-​<script>
+<script>
 let cloudSocket = null;
 try {
 if (typeof io !== 'undefined' && window.location.protocol.startsWith('http')) {
 cloudSocket = io();
 }
 } catch (e) {}
-​const appState = {
+const appState = {
 activeBottomTab: 'controles',
 isProPlan: false,
 isLiveConnected: false,
@@ -1033,12 +1033,12 @@ roadOffset: 0,
 screenShake: 0,
 tornado: { active: false, x: 0, z: 0.1, owner: '' }
 };
-​const NAMES_POOL = [
+const NAMES_POOL = [
 'Lucas_GT', 'AnaSpeed', 'PedroRacer', 'MariTurbo', 'Gabriel99',
 'Juh_Drift', 'MatheusBR', 'Camila_Ofc', 'RafaNascar', 'Bia_Play',
 'ThiagoV8', 'Lari_SP', 'FelipePro', 'Amanda_X', 'BrunoRumble'
 ];
-​const CAR_PALETTES = [
+const CAR_PALETTES = [
 { body: '#ef4444', stripe: '#fde047', num: '03' },
 { body: '#00d2ff', stripe: '#ffffff', num: '24' },
 { body: '#f59e0b', stripe: '#111827', num: '88' },
@@ -1046,20 +1046,20 @@ tornado: { active: false, x: 0, z: 0.1, owner: '' }
 { body: '#ff2a6d', stripe: '#ffffff', num: '07' },
 { body: '#3b82f6', stripe: '#f97316', num: '43' }
 ];
-​function showToast(msg, type = 'info') {
+function showToast(msg, type = 'info') {
 const container = document.getElementById('toast-container');
 if (!container) return;
 const el = document.createElement('div');
 const borderCol = type === 'success' ? 'border-emerald-400/50 text-emerald-200' : 'border-lh-cyan/50 text-white';
-el.className = animate-pop bg-lh-card/95 backdrop-blur-md border ${borderCol} rounded-2xl px-4 py-2.5 text-xs font-bold shadow-2xl text-center;
+el.className = `animate-pop bg-lh-card/95 backdrop-blur-md border ${borderCol} rounded-2xl px-4 py-2.5 text-xs font-bold shadow-2xl text-center`;
 el.textContent = msg;
 container.appendChild(el);
 setTimeout(() => el.remove(), 3200);
 }
-​let toneInitialized = false;
+let toneInitialized = false;
 let sfxSynth = null;
 let noiseSynth = null;
-​async function initAudio() {
+async function initAudio() {
 if (toneInitialized || !window.Tone) return;
 try {
 await Tone.start();
@@ -1067,15 +1067,15 @@ sfxSynth = new Tone.PolySynth(Tone.Synth, {
 oscillator: { type: 'triangle' },
 envelope: { attack: 0.01, decay: 0.15, sustain: 0.1, release: 0.3 }
 }).toDestination();
-​noiseSynth = new Tone.NoiseSynth({
+noiseSynth = new Tone.NoiseSynth({
 noise: { type: 'pink' },
 envelope: { attack: 0.04, decay: 0.25, sustain: 0.05, release: 0.3 }
 }).toDestination();
-​applySfxVolume();
+applySfxVolume();
 toneInitialized = true;
 } catch (e) {}
 }
-​function applySfxVolume() {
+function applySfxVolume() {
 if (!sfxSynth) return;
 if (appState.sfxVolume <= 0) {
 sfxSynth.volume.value = -60;
@@ -1086,7 +1086,7 @@ sfxSynth.volume.value = db;
 if (noiseSynth) noiseSynth.volume.value = db - 4;
 }
 }
-​function playSfx(notes, duration = '16n', withNoise = false) {
+function playSfx(notes, duration = '16n', withNoise = false) {
 if (appState.sfxVolume <= 0) return;
 initAudio().then(() => {
 if (!sfxSynth) return;
@@ -1096,7 +1096,7 @@ if (withNoise && noiseSynth) noiseSynth.triggerAttackRelease(duration);
 } catch (e) {}
 });
 }
-​function speakVoice(text) {
+function speakVoice(text) {
 if (appState.voiceMuted || !('speechSynthesis' in window)) return;
 try {
 window.speechSynthesis.cancel();
@@ -1106,7 +1106,7 @@ u.rate = 1.2;
 window.speechSynthesis.speak(u);
 } catch (e) {}
 }
-​function triggerEffectPad(effectName) {
+function triggerEffectPad(effectName) {
 initAudio();
 const map = {
 fogos: { notes: ['C5', 'G5', 'C6'], noise: true, emoji: '🎆', label: 'Fogos de artifício!' },
@@ -1124,15 +1124,15 @@ const item = map[effectName];
 if (!item) return;
 playSfx(item.notes, '8n', item.noise);
 spawnBurstParticles(canvas.width * 0.5, canvas.height * 0.45, '#00d2ff', 22);
-showToast(${item.emoji} ${item.label}, 'info');
+showToast(`${item.emoji} ${item.label}`, 'info');
 }
-​function selectMusicService(service) {
+function selectMusicService(service) {
 appState.musicService = service;
 const btnSp = document.getElementById('btn-service-spotify');
 const btnYt = document.getElementById('btn-service-ytmusic');
 const panelSp = document.getElementById('music-connect-spotify');
 const panelYt = document.getElementById('music-connect-ytmusic');
-​if (service === 'spotify') {
+if (service === 'spotify') {
 btnSp.className = 'py-3 px-3 rounded-2xl border-2 border-[#1DB954] bg-[#1DB954]/15 text-white text-xs font-extrabold flex items-center justify-center gap-2 transition';
 btnYt.className = 'py-3 px-3 rounded-2xl border border-lh-border bg-lh-bg hover:bg-lh-cardHover text-zinc-300 text-xs font-extrabold flex items-center justify-center gap-2 transition';
 panelSp.classList.remove('hidden');
@@ -1144,7 +1144,7 @@ panelYt.classList.remove('hidden');
 panelSp.classList.add('hidden');
 }
 }
-​function connectMusicAccount(service) {
+function connectMusicAccount(service) {
 if (service === 'spotify') {
 appState.spotifyConnected = !appState.spotifyConnected;
 const statusEl = document.getElementById('spotify-conn-status');
@@ -1175,49 +1175,49 @@ btnEl.textContent = 'Conectar Conta';
 }
 }
 }
-​function loadSpotifyEmbed() {
+function loadSpotifyEmbed() {
 const raw = document.getElementById('input-spotify-url').value.trim();
-const match = raw.match(/open.spotify.com/(playlist|track|album)/([a-zA-Z0-9]+)/);
+const match = raw.match(/open\.spotify\.com\/(playlist|track|album)\/([a-zA-Z0-9]+)/);
 if (!match) {
 showToast('Cole um link válido do Spotify.', 'info');
 return;
 }
 const [, type, id] = match;
-document.getElementById('spotify-iframe').src = https://open.spotify.com/embed/${type}/${id}?utm_source=generator&theme=0;
+document.getElementById('spotify-iframe').src = `https://open.spotify.com/embed/${type}/${id}?utm_source=generator&theme=0` ;
 showToast('Playlist/Música do Spotify carregada!', 'success');
 }
-​function setSpotifyPreset(playlistId, label) {
-const url = https://open.spotify.com/playlist/${playlistId};
+function setSpotifyPreset(playlistId, label) {
+const url = `https://open.spotify.com/playlist/${playlistId}`;
 document.getElementById('input-spotify-url').value = url;
-document.getElementById('spotify-iframe').src = https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator&theme=0;
-document.getElementById('music-now-playing').textContent = Spotify carregado: ${label}.;
-showToast(Spotify: ${label} carregada!, 'success');
+document.getElementById('spotify-iframe').src = `https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator&theme=0`;
+document.getElementById('music-now-playing').textContent = `Spotify carregado: ${label}.`;
+showToast(`Spotify: ${label} carregada!`, 'success');
 }
-​function loadYouTubeMusicEmbed() {
+function loadYouTubeMusicEmbed() {
 const raw = document.getElementById('input-ytmusic-url').value.trim();
 const listMatch = raw.match(/[?&]list=([a-zA-Z0-9_-]+)/);
-const vidMatch = raw.match(/(?:v=|youtu.be/)([a-zA-Z0-9_-]{11})/);
+const vidMatch = raw.match(/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
 const iframe = document.getElementById('ytmusic-iframe');
-​if (listMatch) {
-iframe.src = https://www.youtube.com/embed/videoseries?list=${listMatch[1]}&enablejsapi=1;
+if (listMatch) {
+iframe.src = `https://www.youtube.com/embed/videoseries?list=${listMatch[1]}&enablejsapi=1`;
 showToast('Playlist do YouTube Music carregada!', 'success');
 } else if (vidMatch) {
-iframe.src = https://www.youtube.com/embed/${vidMatch[1]}?enablejsapi=1;
+iframe.src = `https://www.youtube.com/embed/${vidMatch[1]}?enablejsapi=1`;
 showToast('Faixa do YouTube Music carregada!', 'success');
 } else {
 showToast('Cole um link válido do YouTube Music.', 'info');
 }
 }
-​function setYtPreset(videoId, label) {
-document.getElementById('input-ytmusic-url').value = https://music.youtube.com/watch?v=${videoId};
-document.getElementById('ytmusic-iframe').src = https://www.youtube.com/embed/${videoId}?enablejsapi=1;
-document.getElementById('music-now-playing').textContent = YouTube Music carregado: ${label}.;
-showToast(YouTube Music: ${label} carregado!, 'success');
+function setYtPreset(videoId, label) {
+document.getElementById('input-ytmusic-url').value = `https://music.youtube.com/watch?v=${videoId}`;
+document.getElementById('ytmusic-iframe').src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1`;
+document.getElementById('music-now-playing').textContent = `YouTube Music carregado: ${label}.`;
+showToast(`YouTube Music: ${label} carregado!`, 'success');
 }
-​function controlBgMusic(action) {
+function controlBgMusic(action) {
 const ytFrame = document.getElementById('ytmusic-iframe');
 const statusText = document.getElementById('music-now-playing');
-​if (action === 'play') {
+if (action === 'play') {
 appState.musicPlaying = true;
 if (appState.musicService === 'ytmusic' && ytFrame.contentWindow) {
 ytFrame.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '');
@@ -1241,33 +1241,33 @@ ytFrame.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":
 statusText.textContent = '⏹ Música de fundo parada.';
 }
 }
-​function updateMusicVolume(val) {
+function updateMusicVolume(val) {
 appState.musicVolume = Number(val);
-document.getElementById('music-volume-label').textContent = ${val}%;
+document.getElementById('music-volume-label').textContent = `${val}%`;
 const ytFrame = document.getElementById('ytmusic-iframe');
 if (ytFrame && ytFrame.contentWindow) {
-ytFrame.contentWindow.postMessage({"event":"command","func":"setVolume","args":[${val}]}, '*');
+ytFrame.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'setVolume', args: [Number(val)] }), '*');
 }
 }
-​function updateSfxVolume(val) {
+function updateSfxVolume(val) {
 appState.sfxVolume = Number(val);
 document.getElementById('sfx-volume-label').textContent = val;
 applySfxVolume();
 }
-​function switchBottomTab(tab) {
+function switchBottomTab(tab) {
 appState.activeBottomTab = tab;
 const controlesView = document.getElementById('tab-view-controles');
 const ajustesView = document.getElementById('tab-view-ajustes');
 const extraView = document.getElementById('tab-view-extra');
 const stageCol = document.getElementById('game-stage-column');
-​const bControles = document.getElementById('bnav-controles');
+const bControles = document.getElementById('bnav-controles');
 const bAjustes = document.getElementById('bnav-ajustes');
 const bJogoLabel = document.getElementById('bnav-jogo-label');
-​bControles.className = 'flex flex-col items-center justify-center gap-1 text-zinc-400 hover:text-white transition w-20';
+bControles.className = 'flex flex-col items-center justify-center gap-1 text-zinc-400 hover:text-white transition w-20';
 bAjustes.className = 'flex flex-col items-center justify-center gap-1 text-zinc-400 hover:text-white transition w-20';
 bJogoLabel.className = 'text-[11px] font-bold text-zinc-300 mt-1';
-​extraView.classList.add('hidden');
-​if (tab === 'controles') {
+extraView.classList.add('hidden');
+if (tab === 'controles') {
 controlesView.classList.remove('hidden');
 ajustesView.classList.add('hidden');
 stageCol.classList.add('hidden', 'lg:flex');
@@ -1287,46 +1287,46 @@ setTimeout(resizeCanvas, 50);
 }
 window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-​function switchTopNav(section) {
+function switchTopNav(section) {
 document.querySelectorAll('.topnav-btn').forEach(btn => {
 btn.classList.remove('text-lh-cyan');
 btn.classList.add('text-zinc-400');
 });
-const activeBtn = document.getElementById(topnav-${section});
+const activeBtn = document.getElementById(`topnav-${section}`);
 if (activeBtn) {
 activeBtn.classList.remove('text-zinc-400');
 activeBtn.classList.add('text-lh-cyan');
 }
-​if (section === 'meus-jogos') {
+if (section === 'meus-jogos') {
 switchBottomTab('controles');
 return;
 }
-​document.getElementById('tab-view-controles').classList.add('hidden');
+document.getElementById('tab-view-controles').classList.add('hidden');
 document.getElementById('tab-view-ajustes').classList.add('hidden');
 const extraView = document.getElementById('tab-view-extra');
 extraView.classList.remove('hidden');
-​const titleEl = document.getElementById('extra-view-title');
+const titleEl = document.getElementById('extra-view-title');
 const contentEl = document.getElementById('extra-view-content');
-​if (section === 'inicio') {
+if (section === 'inicio') {
 titleEl.textContent = 'Catálogo de Jogos • LH Live Interativa';
-contentEl.innerHTML = <div class="p-4 rounded-2xl bg-lh-bg border border-lh-cyan/40 flex items-center justify-between gap-3"> <div> <span class="text-[10px] font-bold uppercase text-lh-cyan">Ativo Agora</span> <h3 class="text-sm font-extrabold text-white">🏎️ Rumble Turbo Live (1 Minuto)</h3> <p class="text-xs text-zinc-400 mt-0.5">Corrida estilo NASCAR Rumble PS1 com Tap-Tap e Tornado.</p> </div> <button onclick="switchTopNav('meus-jogos')" class="px-3 py-2 rounded-xl bg-lh-cyan text-black font-bold">Abrir</button> </div>;
+contentEl.innerHTML = `<div class="p-4 rounded-2xl bg-lh-bg border border-lh-cyan/40 flex items-center justify-between gap-3"> <div> <span class="text-[10px] font-bold uppercase text-lh-cyan">Ativo Agora</span> <h3 class="text-sm font-extrabold text-white">🏎️ Rumble Turbo Live (1 Minuto)</h3> <p class="text-xs text-zinc-400 mt-0.5">Corrida estilo NASCAR Rumble PS1 com Tap-Tap e Tornado.</p> </div> <button onclick="switchTopNav('meus-jogos')" class="px-3 py-2 rounded-xl bg-lh-cyan text-black font-bold">Abrir</button> </div>`;
 } else if (section === 'planos') {
 titleEl.textContent = 'Planos & Assinaturas';
-contentEl.innerHTML = <div class="p-4 rounded-2xl bg-lh-bg border border-lh-cyan/40 space-y-2"> <h3 class="text-base font-extrabold text-white">Plano LH Live PRO — R$ 49,90/mês</h3> <p class="text-zinc-400">Libera conexão ilimitada com o chat e presentes reais do TikTok Live + Spotify/YouTube Music.</p> <button onclick="activateProDemo()" class="w-full py-2.5 rounded-xl bg-lh-cyan text-black font-extrabold">Ativar Plano Agora</button> </div>;
+contentEl.innerHTML = `<div class="p-4 rounded-2xl bg-lh-bg border border-lh-cyan/40 space-y-2"> <h3 class="text-base font-extrabold text-white">Plano LH Live PRO — R$ 49,90/mês</h3> <p class="text-zinc-400">Libera conexão ilimitada com o chat e presentes reais do TikTok Live + Spotify/YouTube Music.</p> <button onclick="activateProDemo()" class="w-full py-2.5 rounded-xl bg-lh-cyan text-black font-extrabold">Ativar Plano Agora</button> </div>`;
 } else if (section === 'afiliados') {
 titleEl.textContent = 'Programa de Afiliados LH Live';
-contentEl.innerHTML = <div class="p-4 rounded-2xl bg-lh-bg border border-lh-border space-y-2"> <p class="text-white font-bold">Indique criadores e ganhe 30% de comissão recorrente!</p> <p class="text-zinc-400">Seu link exclusivo: <code class="text-lh-cyan">https://lhliveinterativa.com.br/?ref=lhcreator</code></p> </div>;
+contentEl.innerHTML = `<div class="p-4 rounded-2xl bg-lh-bg border border-lh-border space-y-2"> <p class="text-white font-bold">Indique criadores e ganhe 30% de comissão recorrente!</p> <p class="text-zinc-400">Seu link exclusivo: <code class="text-lh-cyan">https://lhliveinterativa.com.br/?ref=lhcreator</code></p> </div>`;
 }
 }
-​function selectSettingSection(cat) {
+function selectSettingSection(cat) {
 document.querySelectorAll('.set-cat-btn').forEach(btn => {
 btn.className = 'set-cat-btn bg-lh-bg border border-lh-border rounded-2xl p-3 text-left flex items-center gap-3 transition';
 });
-const active = document.getElementById(set-cat-${cat});
+const active = document.getElementById(`set-cat-${cat}`);
 if (active) {
 active.className = 'set-cat-btn bg-lh-cyan/15 border-2 border-lh-cyan rounded-2xl p-3 text-left flex items-center gap-3 transition';
 }
-​document.querySelectorAll('.settings-subpanel').forEach(p => p.classList.add('hidden'));
+document.querySelectorAll('.settings-subpanel').forEach(p => p.classList.add('hidden'));
 if (cat === 'musica') {
 document.getElementById('settings-panel-musica').classList.remove('hidden');
 } else if (cat === 'pista') {
@@ -1334,43 +1334,43 @@ document.getElementById('settings-panel-pista').classList.remove('hidden');
 } else {
 const outros = document.getElementById('settings-panel-outros');
 outros.classList.remove('hidden');
-document.getElementById('settings-outros-title').textContent = Ajustes de ${cat.toUpperCase()};
+document.getElementById('settings-outros-title').textContent = `Ajustes de ${cat.toUpperCase()}`;
 }
 }
-​function activateProDemo() {
+function activateProDemo() {
 appState.isProPlan = true;
 document.getElementById('pill-plan-state').innerHTML = '<span class="text-lh-cyan">✨</span><span class="text-lh-cyan font-bold">Plano PRO Ativo</span>';
 document.getElementById('test-mode-notice').textContent = 'Plano PRO ativo! Você já pode conectar sua live real do TikTok.';
 document.getElementById('btn-activate-plan').textContent = '✓ Plano LH Live PRO Ativo';
 showToast('Plano LH Live PRO ativado! Conexão ao vivo liberada.', 'success');
 }
-​function toggleTikTokConnection() {
+function toggleTikTokConnection() {
 initAudio();
 const rawUser = document.getElementById('input-tiktok-user').value.trim().replace(/^@/, '') || 'lhliveoficial';
 appState.tiktokUser = rawUser;
-​if (cloudSocket && cloudSocket.connected) {
+if (cloudSocket && cloudSocket.connected) {
 if (!appState.isLiveConnected) {
-showToast(Conectando à live real de @${rawUser}..., 'info');
+showToast(`Conectando à live real de @${rawUser}...`, 'info');
 cloudSocket.emit('connect_tiktok', { username: rawUser });
 } else {
 cloudSocket.emit('disconnect_tiktok');
 }
 return;
 }
-​applyConnectionUIState(!appState.isLiveConnected, rawUser);
+applyConnectionUIState(!appState.isLiveConnected, rawUser);
 }
-​function applyConnectionUIState(connected, rawUser) {
+function applyConnectionUIState(connected, rawUser) {
 appState.isLiveConnected = connected;
-​const dot = document.getElementById('live-status-dot');
+const dot = document.getElementById('live-status-dot');
 const title = document.getElementById('live-status-title');
 const sub = document.getElementById('live-status-sub');
 const pill = document.getElementById('pill-connection-state');
 const feedLbl = document.getElementById('feed-status-label');
 const btnText = document.getElementById('btn-connect-tiktok-text');
 const nowStatus = document.getElementById('info-now-status');
-​if (appState.isLiveConnected) {
+if (appState.isLiveConnected) {
 dot.className = 'w-4 h-4 rounded-full bg-emerald-400 animate-ping shrink-0';
-title.textContent = 🟢 LIVE CONECTADA — @${rawUser};
+title.textContent = `🟢 LIVE CONECTADA — @${rawUser}`;
 sub.textContent = 'Recebendo comentários, Tap-Taps e presentes do TikTok em tempo real!';
 pill.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-400"></span><span class="text-emerald-400">Conectada</span>';
 feedLbl.textContent = 'Feed conectado';
@@ -1379,7 +1379,7 @@ btnText.textContent = 'Desconectar TikTok';
 nowStatus.textContent = 'Ao vivo';
 nowStatus.className = 'font-bold text-emerald-400';
 markStepDone('step-check-4');
-showToast(Conectado à live de @${rawUser}!, 'success');
+showToast(`Conectado à live de @${rawUser}!`, 'success');
 } else {
 dot.className = 'w-4 h-4 rounded-full bg-zinc-600 shrink-0';
 title.textContent = '⚪ LIVE DESLIGADA — o jogo não está conectado';
@@ -1393,7 +1393,7 @@ nowStatus.className = 'font-bold text-white';
 showToast('Live desconectada. Modo simulador disponível.', 'info');
 }
 }
-​function openFullscreenStage() {
+function openFullscreenStage() {
 switchBottomTab('jogo');
 const wrapper = document.getElementById('game-stage-wrapper');
 const closeBtn = document.getElementById('btn-close-fullscreen');
@@ -1403,7 +1403,7 @@ closeBtn.classList.remove('hidden');
 markStepDone('step-check-3');
 setTimeout(resizeCanvas, 50);
 }
-​function closeFullscreenStage() {
+function closeFullscreenStage() {
 const wrapper = document.getElementById('game-stage-wrapper');
 const closeBtn = document.getElementById('btn-close-fullscreen');
 wrapper.classList.add('max-w-[370px]', 'rounded-[30px]', 'border-4');
@@ -1411,10 +1411,10 @@ wrapper.classList.remove('fixed', 'inset-0', 'z-50', 'max-w-md', 'mx-auto', 'h-s
 closeBtn.classList.add('hidden');
 setTimeout(resizeCanvas, 50);
 }
-​function copyOverlayLink() {
+function copyOverlayLink() {
 const url = window.location.href.startsWith('http')
 ? window.location.href
-: https://lhliveinterativa.com.br/overlay/${appState.tiktokUser}-rumble;
+: `https://lhliveinterativa.com.br/overlay/${appState.tiktokUser}-rumble`;
 const temp = document.createElement('input');
 temp.value = url;
 document.body.appendChild(temp);
@@ -1422,14 +1422,14 @@ temp.select();
 try {
 document.execCommand('copy');
 markStepDone('step-check-3');
-showToast(Link copiado: ${url}, 'success');
+showToast(`Link copiado: ${url}`, 'success');
 } catch (e) {
 showToast('Link pronto para OBS: ' + url, 'info');
 }
 document.body.removeChild(temp);
 }
-​function copySessionSummary() {
-const summary = LH Live Interativa (@${appState.tiktokUser}) | Comentários: ${appState.commentsCount} | Presentes: ${appState.giftsCount} | Moedas: ${appState.coinsCount};
+function copySessionSummary() {
+const summary = `LH Live Interativa (@${appState.tiktokUser}) | Comentários: ${appState.commentsCount} | Presentes: ${appState.giftsCount} | Moedas: ${appState.coinsCount}`;
 const temp = document.createElement('input');
 temp.value = summary;
 document.body.appendChild(temp);
@@ -1440,36 +1440,36 @@ showToast('Resumo da sessão copiado!', 'success');
 } catch (e) {}
 document.body.removeChild(temp);
 }
-​function toggleAccordion(bodyId, arrowId) {
+function toggleAccordion(bodyId, arrowId) {
 const body = document.getElementById(bodyId);
 const arrow = document.getElementById(arrowId);
 const isHidden = body.classList.contains('hidden');
 body.classList.toggle('hidden');
 if (arrow) arrow.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
 }
-​function scrollToElement(id) {
+function scrollToElement(id) {
 switchBottomTab('controles');
 setTimeout(() => {
 const el = document.getElementById(id);
 if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }, 60);
 }
-​function scrollToFaq() {
+function scrollToFaq() {
 scrollToElement('faq-section');
 }
-​function markStepDone(id) {
+function markStepDone(id) {
 const li = document.getElementById(id);
 if (!li) return;
 const badge = li.querySelector('span:first-child');
 badge.className = 'w-4 h-4 rounded-full border border-lh-cyan bg-lh-cyan/20 text-lh-cyan flex items-center justify-center text-[10px] font-bold';
 badge.textContent = '✓';
 }
-​const canvas = document.getElementById('race-canvas');
+const canvas = document.getElementById('race-canvas');
 const ctx = canvas.getContext('2d');
 let racers = [];
 let particles = [];
 let powerBannerTimeout = null;
-​function resizeCanvas() {
+function resizeCanvas() {
 const wrapper = document.getElementById('game-stage-wrapper');
 if (!wrapper) return;
 const rect = wrapper.getBoundingClientRect();
@@ -1478,10 +1478,10 @@ canvas.width = Math.floor(rect.width);
 canvas.height = Math.floor(rect.height);
 }
 }
-​function setTrackTheme(theme) {
+function setTrackTheme(theme) {
 appState.trackTheme = theme;
 ['canyon', 'neon', 'transparent'].forEach(t => {
-const btn = document.getElementById(btn-theme-${t});
+const btn = document.getElementById(`btn-theme-${t}`);
 if (btn) {
 btn.className = t === theme
 ? 'py-2.5 px-2 rounded-2xl border-2 border-lh-cyan bg-lh-cyan/15 text-xs font-bold text-white'
@@ -1495,10 +1495,10 @@ wrapper.classList.add('checkerboard-bg');
 wrapper.classList.remove('checkerboard-bg');
 }
 }
-​function toggleHudRanking(show) {
+function toggleHudRanking(show) {
 document.getElementById('hud-ranking-box').classList.toggle('hidden', !show);
 }
-​function showPowerBanner(title, sub) {
+function showPowerBanner(title, sub) {
 const box = document.getElementById('stage-powerup-banner');
 document.getElementById('stage-powerup-title').textContent = title;
 document.getElementById('stage-powerup-sub').textContent = sub;
@@ -1506,23 +1506,23 @@ box.classList.remove('hidden');
 if (powerBannerTimeout) clearTimeout(powerBannerTimeout);
 powerBannerTimeout = setTimeout(() => box.classList.add('hidden'), 3200);
 }
-​function spawnRacer(customName = null) {
+function spawnRacer(customName = null) {
 if (appState.raceState !== 'racing') return null;
 const name = customName || NAMES_POOL[Math.floor(Math.random() * NAMES_POOL.length)] + '_' + Math.floor(Math.random() * 90 + 10);
-​const existing = racers.find(r => r.name.toLowerCase() === name.toLowerCase());
+const existing = racers.find(r => r.name.toLowerCase() === name.toLowerCase());
 if (existing) {
 existing.taps += 5;
 existing.progress += 14;
 existing.nitroTimer = 30;
 return existing;
 }
-​if (racers.length >= 18) {
+if (racers.length >= 18) {
 racers.sort((a, b) => b.progress - a.progress);
 racers.pop();
 }
-​const palette = CAR_PALETTES[racers.length % CAR_PALETTES.length];
+const palette = CAR_PALETTES[racers.length % CAR_PALETTES.length];
 const avgProg = racers.length > 0 ? racers.reduce((s, r) => s + r.progress, 0) / racers.length : 40;
-​const car = {
+const car = {
 id: String(Date.now() + Math.random()),
 name,
 palette,
@@ -1537,12 +1537,12 @@ spinTimer: 0,
 shieldTimer: 0,
 aiTimer: Math.floor(Math.random() * 50) + 30
 };
-​racers.push(car);
+racers.push(car);
 playSfx(['G4', 'C5'], '32n');
 updateMetricsUI();
 return car;
 }
-​function handleStageTap() {
+function handleStageTap() {
 initAudio();
 if (appState.raceState !== 'racing') return;
 if (racers.length === 0) {
@@ -1558,19 +1558,19 @@ playSfx(['C5'], '32n');
 appState.responsesCount++;
 updateMetricsUI();
 }
-​function applyPowerUp(type, qty = 1, donorName = null) {
+function applyPowerUp(type, qty = 1, donorName = null) {
 initAudio();
 if (appState.raceState !== 'racing') startNewRace(false);
 if (racers.length === 0) {
 for (let i = 0; i < 6; i++) spawnRacer();
 }
-​const sorted = [...racers].sort((a, b) => b.progress - a.progress);
+const sorted = [...racers].sort((a, b) => b.progress - a.progress);
 const user = donorName
 ? (racers.find(r => r.name === donorName) || spawnRacer(donorName))
 : racers[Math.floor(Math.random() * racers.length)];
-​let coinValue = 1;
+let coinValue = 1;
 let giftLabel = 'Rosa';
-​if (type === 'nitro') {
+if (type === 'nitro') {
 coinValue = 1 * qty;
 giftLabel = 'Rosa (Nitro)';
 user.coins += coinValue;
@@ -1579,7 +1579,7 @@ user.spinTimer = 0;
 user.nitroTimer = 140;
 user.progress += 55;
 playSfx(['C4', 'G4', 'C5', 'E5'], '8n', true);
-showPowerBanner(🔥 ${user.name} ativou NITRO!, +${coinValue} moeda(s) • Arrancada supersônica!);
+showPowerBanner(`🔥 ${user.name} ativou NITRO!`, `+${coinValue} moeda(s) • Arrancada supersônica!`);
 } else if (type === 'freeze') {
 coinValue = 30 * qty;
 giftLabel = 'Perfume (Gelo)';
@@ -1596,8 +1596,8 @@ frozen++;
 });
 appState.screenShake = 8;
 playSfx(['B5', 'F#6', 'B6'], '8n');
-showPowerBanner(❄️ ${user.name} lançou RAIO DE GELO!, +${coinValue} moedas • Os 3 líderes congelaram!);
-speakVoice(Raio de gelo de ${user.name}!);
+showPowerBanner(`❄️ ${user.name} lançou RAIO DE GELO!`, `+${coinValue} moedas • Os 3 líderes congelaram!`);
+speakVoice(`Raio de gelo de ${user.name}!`);
 } else if (type === 'tornado') {
 coinValue = 500 * qty;
 giftLabel = 'Galaxy (Tornado)';
@@ -1608,7 +1608,7 @@ user.nitroTimer = 220;
 user.shieldTimer = 220;
 const leader = sorted[0];
 user.progress = Math.max(user.progress + 110, (leader ? leader.progress + 50 : 180));
-​appState.tornado = { active: true, x: 0, z: 0.92, owner: user.name };
+appState.tornado = { active: true, x: 0, z: 0.92, owner: user.name };
 racers.forEach(r => {
 if (r.id !== user.id) {
 r.spinTimer = 135;
@@ -1617,8 +1617,8 @@ r.nitroTimer = 0;
 });
 appState.screenShake = 18;
 playSfx(['D3', 'A3', 'D4', 'F4'], '4n', true);
-showPowerBanner(🌪️ TORNADO RUMBLE DE ${user.name}!, +${coinValue} moedas • Rivais girando no ar!);
-speakVoice(Tornado na pista! ${user.name} assumiu a liderança!);
+showPowerBanner(`🌪️ TORNADO RUMBLE DE ${user.name}!`, `+${coinValue} moedas • Rivais girando no ar!`);
+speakVoice(`Tornado na pista! ${user.name} assumiu a liderança!`);
 } else if (type === 'oil') {
 coinValue = 1 * qty;
 giftLabel = 'Óleo na Pista';
@@ -1629,24 +1629,24 @@ leader.spinTimer = 95;
 leader.nitroTimer = 0;
 }
 playSfx(['G3', 'C3'], '8n');
-showPowerBanner(🛢️ ÓLEO NA PISTA por ${user.name}!, +${coinValue} moeda • O líder derrapou!);
+showPowerBanner(`🛢️ ÓLEO NA PISTA por ${user.name}!`, `+${coinValue} moeda • O líder derrapou!`);
 }
-​appState.giftsCount += qty;
+appState.giftsCount += qty;
 appState.coinsCount += coinValue;
 appState.responsesCount++;
 appState.giftCountsMap[giftLabel] = (appState.giftCountsMap[giftLabel] || 0) + qty;
 appState.donorRankingMap[user.name] = (appState.donorRankingMap[user.name] || 0) + coinValue;
-​addRecentGiftItem(user.name, giftLabel, coinValue);
-addChatMessage(user.name, enviou ${qty}x ${giftLabel} (+${coinValue} moedas)! 🎁, true);
+addRecentGiftItem(user.name, giftLabel, coinValue);
+addChatMessage(user.name, `enviou ${qty}x ${giftLabel} (+${coinValue} moedas)! 🎁`, true);
 updateMetricsUI();
 }
-​function testAction(action, isFromRemote = false) {
+function testAction(action, isFromRemote = false) {
 initAudio();
 markStepDone('step-check-2');
-​if (!isFromRemote && cloudSocket && cloudSocket.connected) {
+if (!isFromRemote && cloudSocket && cloudSocket.connected) {
 cloudSocket.emit('sync_command', { type: 'testAction', action });
 }
-​if (action === 'join') {
+if (action === 'join') {
 const r = spawnRacer();
 appState.commentsCount++;
 appState.responsesCount++;
@@ -1661,7 +1661,7 @@ appState.responsesCount++;
 if (r) {
 r.nitroTimer = 90;
 addChatMessage(r.name, 'seguiu o perfil e ganhou turbo! ⭐');
-showPowerBanner(⭐ NOVO SEGUIDOR: ${r.name}, 'Ganhou impulso extra na largada!');
+showPowerBanner(`⭐ NOVO SEGUIDOR: ${r.name}`, 'Ganhou impulso extra na largada!');
 }
 } else if (action === 'likes') {
 handleStageTap();
@@ -1681,33 +1681,33 @@ showToast('🏎️ +8 pilotos entraram na pista!', 'success');
 }
 updateMetricsUI();
 }
-​function sendSelectedTestGift() {
+function sendSelectedTestGift() {
 const type = document.getElementById('select-test-gift').value;
 const qty = Math.max(1, parseInt(document.getElementById('input-gift-qty').value, 10) || 1);
 markStepDone('step-check-2');
 applyPowerUp(type, qty);
 }
-​function toggleSimulatorRunning() {
+function toggleSimulatorRunning() {
 appState.simulatorActive = !appState.simulatorActive;
 const btn = document.getElementById('btn-toggle-simulator');
 btn.textContent = appState.simulatorActive ? 'Pausar simulador' : 'Iniciar simulador';
 showToast(appState.simulatorActive ? 'Simulador de público ativado!' : 'Simulador pausado.', 'info');
 }
-​function updateCrowdMode() {
+function updateCrowdMode() {
 appState.crowdMode = document.getElementById('select-crowd-mode').value;
 appState.simulatorActive = appState.crowdMode !== 'pausado';
 }
-​function toggleMuteVoice() {
+function toggleMuteVoice() {
 appState.voiceMuted = !appState.voiceMuted;
 document.getElementById('icon-mute-voice').textContent = appState.voiceMuted ? '🔇' : '🔊';
 document.getElementById('label-mute-voice').textContent = appState.voiceMuted ? 'Ativar voz do locutor' : 'Mutar personagem';
 }
-​function togglePauseGame() {
+function togglePauseGame() {
 appState.isPaused = !appState.isPaused;
 document.getElementById('icon-pause-game').textContent = appState.isPaused ? '▶️' : '⏸';
 document.getElementById('label-pause-game').textContent = appState.isPaused ? 'Continuar jogo' : 'Pausar jogo';
 }
-​function spawnBurstParticles(x, y, color, count = 15) {
+function spawnBurstParticles(x, y, color, count = 15) {
 for (let i = 0; i < count; i++) {
 const ang = Math.random() * Math.PI * 2;
 const spd = Math.random() * 4 + 1.5;
@@ -1721,31 +1721,31 @@ size: Math.random() * 3.5 + 2
 });
 }
 }
-​function renderRaceFrame(timestamp) {
+function renderRaceFrame(timestamp) {
 const w = canvas.width;
 const h = canvas.height;
 if (w === 0 || h === 0) {
 requestAnimationFrame(renderRaceFrame);
 return;
 }
-​ctx.save();
+ctx.save();
 if (appState.screenShake > 0) {
 ctx.translate((Math.random() - 0.5) * appState.screenShake, (Math.random() - 0.5) * appState.screenShake);
 appState.screenShake *= 0.86;
 if (appState.screenShake < 0.4) appState.screenShake = 0;
 }
-​ctx.clearRect(0, 0, w, h);
-​const horizonY = h * 0.30;
+ctx.clearRect(0, 0, w, h);
+const horizonY = h * 0.30;
 const roadBottomHalfW = w * 0.46;
 const roadTopHalfW = w * 0.11;
 const centerX = w * 0.5;
-​if (!appState.isPaused && appState.raceState === 'racing') {
+if (!appState.isPaused && appState.raceState === 'racing') {
 const hasNitro = racers.some(r => r.nitroTimer > 0);
 appState.roadOffset = (appState.roadOffset + (hasNitro ? 0.045 : 0.028)) % 1;
 }
-​if (appState.trackTheme !== 'transparent') {
+if (appState.trackTheme !== 'transparent') {
 const isNeon = appState.trackTheme === 'neon';
-​const skyGrad = ctx.createLinearGradient(0, 0, 0, horizonY);
+const skyGrad = ctx.createLinearGradient(0, 0, 0, horizonY);
 if (isNeon) {
 skyGrad.addColorStop(0, '#05060a');
 skyGrad.addColorStop(1, '#0c2438');
@@ -1756,11 +1756,11 @@ skyGrad.addColorStop(1, '#f59e0b');
 }
 ctx.fillStyle = skyGrad;
 ctx.fillRect(0, 0, w, horizonY);
-​ctx.fillStyle = isNeon ? 'rgba(0, 210, 255, 0.35)' : 'rgba(254, 240, 138, 0.75)';
+ctx.fillStyle = isNeon ? 'rgba(0, 210, 255, 0.35)' : 'rgba(254, 240, 138, 0.75)';
 ctx.beginPath();
 ctx.arc(centerX, horizonY - 12, 34, Math.PI, 0);
 ctx.fill();
-​ctx.fillStyle = isNeon ? '#090d16' : '#78350f';
+ctx.fillStyle = isNeon ? '#090d16' : '#78350f';
 ctx.beginPath();
 ctx.moveTo(0, horizonY);
 ctx.lineTo(w * 0.18, horizonY - 26);
@@ -1771,9 +1771,9 @@ ctx.lineTo(w, horizonY - 22);
 ctx.lineTo(w, horizonY);
 ctx.closePath();
 ctx.fill();
-​ctx.fillStyle = isNeon ? '#0b0d14' : '#9a3412';
+ctx.fillStyle = isNeon ? '#0b0d14' : '#9a3412';
 ctx.fillRect(0, horizonY, w, h - horizonY);
-​ctx.fillStyle = isNeon ? '#151822' : '#27272a';
+ctx.fillStyle = isNeon ? '#151822' : '#27272a';
 ctx.beginPath();
 ctx.moveTo(centerX - roadTopHalfW, horizonY);
 ctx.lineTo(centerX + roadTopHalfW, horizonY);
@@ -1781,37 +1781,37 @@ ctx.lineTo(centerX + roadBottomHalfW, h);
 ctx.lineTo(centerX - roadBottomHalfW, h);
 ctx.closePath();
 ctx.fill();
-​const slices = 16;
+const slices = 16;
 for (let i = 0; i < slices; i++) {
 const z1 = ((i + appState.roadOffset) / slices);
 const z2 = ((i + 1 + appState.roadOffset) / slices);
 const p1 = Math.pow(z1, 1.75);
 const p2 = Math.min(1, Math.pow(z2, 1.75));
-​const y1 = horizonY + p1 * (h - horizonY);
+const y1 = horizonY + p1 * (h - horizonY);
 const y2 = horizonY + p2 * (h - horizonY);
 const hw1 = roadTopHalfW + p1 * (roadBottomHalfW - roadTopHalfW);
 const hw2 = roadTopHalfW + p2 * (roadBottomHalfW - roadTopHalfW);
-​const isAlt = i % 2 === 0;
+const isAlt = i % 2 === 0;
 ctx.fillStyle = isNeon
 ? (isAlt ? '#00d2ff' : '#ff2a6d')
 : (isAlt ? '#ef4444' : '#ffffff');
-​const curb1 = 4 + p1 * 10;
+const curb1 = 4 + p1 * 10;
 const curb2 = 4 + p2 * 10;
-​ctx.beginPath();
+ctx.beginPath();
 ctx.moveTo(centerX - hw1 - curb1, y1);
 ctx.lineTo(centerX - hw1, y1);
 ctx.lineTo(centerX - hw2, y2);
 ctx.lineTo(centerX - hw2 - curb2, y2);
 ctx.closePath();
 ctx.fill();
-​ctx.beginPath();
+ctx.beginPath();
 ctx.moveTo(centerX + hw1, y1);
 ctx.lineTo(centerX + hw1 + curb1, y1);
 ctx.lineTo(centerX + hw2 + curb2, y2);
 ctx.lineTo(centerX + hw2, y2);
 ctx.closePath();
 ctx.fill();
-​if (isAlt) {
+if (isAlt) {
 ctx.strokeStyle = isNeon ? 'rgba(255,255,255,0.32)' : 'rgba(253, 224, 71, 0.6)';
 ctx.lineWidth = 1.5 + p1 * 2.5;
 [-0.33, 0.33].forEach(laneRatio => {
@@ -1823,46 +1823,46 @@ ctx.stroke();
 }
 }
 }
-​const sortedByProgress = [...racers].sort((a, b) => b.progress - a.progress);
+const sortedByProgress = [...racers].sort((a, b) => b.progress - a.progress);
 const leaderProg = sortedByProgress.length > 0 ? sortedByProgress[0].progress : 100;
-​const carsWithDepth = racers.map(car => {
+const carsWithDepth = racers.map(car => {
 if (!appState.isPaused && appState.raceState === 'racing') {
 if (car.nitroTimer > 0) car.nitroTimer--;
 if (car.freezeTimer > 0) car.freezeTimer--;
 if (car.spinTimer > 0) car.spinTimer--;
 if (car.shieldTimer > 0) car.shieldTimer--;
-​if (car.freezeTimer <= 0) {
+if (car.freezeTimer <= 0) {
 const advance = 0.35 + (car.taps * 0.008) + (car.nitroTimer > 0 ? 0.85 : 0);
 car.progress += advance;
 }
-​car.aiTimer--;
+car.aiTimer--;
 if (car.aiTimer <= 0 && car.freezeTimer <= 0) {
 car.targetLaneX = (Math.random() - 0.5) * 1.45;
 car.aiTimer = Math.floor(Math.random() * 65) + 35;
 }
 car.laneX += (car.targetLaneX - car.laneX) * 0.05;
 }
-​const diff = Math.max(0, leaderProg - car.progress);
+const diff = Math.max(0, leaderProg - car.progress);
 const depth = Math.min(0.92, 0.24 + (diff / 220) * 0.68);
 return { car, depth };
 });
-​carsWithDepth.sort((a, b) => a.depth - b.depth);
-​carsWithDepth.forEach(({ car, depth }) => {
+carsWithDepth.sort((a, b) => a.depth - b.depth);
+carsWithDepth.forEach(({ car, depth }) => {
 const y = horizonY + depth * (h - horizonY - 48);
 const halfRoadAtY = roadTopHalfW + depth * (roadBottomHalfW - roadTopHalfW);
 const x = centerX + car.laneX * (halfRoadAtY * 0.82);
 const scale = 0.55 + depth * 0.72;
-​drawPerspectiveStockCar(ctx, car, x, y, scale, timestamp);
+drawPerspectiveStockCar(ctx, car, x, y, scale, timestamp);
 });
-​if (appState.tornado.active) {
+if (appState.tornado.active) {
 appState.tornado.z -= 0.014;
 const ty = horizonY + appState.tornado.z * (h - horizonY);
 const tx = centerX + Math.sin(timestamp * 0.015) * (roadBottomHalfW * 0.55);
 const tScale = 0.5 + appState.tornado.z * 0.9;
-​drawFunnelTornado(ctx, tx, ty, tScale, timestamp);
+drawFunnelTornado(ctx, tx, ty, tScale, timestamp);
 if (appState.tornado.z <= 0.12) appState.tornado.active = false;
 }
-​for (let i = particles.length - 1; i >= 0; i--) {
+for (let i = particles.length - 1; i >= 0; i--) {
 const p = particles[i];
 p.x += p.vx;
 p.y += p.vy;
@@ -1878,47 +1878,47 @@ ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
 ctx.fill();
 ctx.globalAlpha = 1;
 }
-​ctx.restore();
+ctx.restore();
 requestAnimationFrame(renderRaceFrame);
 }
-​function drawPerspectiveStockCar(ctx, car, x, y, scale, timestamp) {
+function drawPerspectiveStockCar(ctx, car, x, y, scale, timestamp) {
 ctx.save();
 ctx.translate(x, y);
 ctx.scale(scale, scale);
-​if (car.spinTimer > 0) {
+if (car.spinTimer > 0) {
 ctx.rotate(car.spinTimer * 0.3);
 ctx.translate(0, -Math.sin((car.spinTimer / 135) * Math.PI) * 18);
 }
-​const w = 44;
+const w = 44;
 const h = 28;
-​ctx.fillStyle = 'rgba(0,0,0,0.5)';
+ctx.fillStyle = 'rgba(0,0,0,0.5)';
 ctx.beginPath();
 ctx.ellipse(0, 12, w * 0.58, 7, 0, 0, Math.PI * 2);
 ctx.fill();
-​ctx.fillStyle = '#090a0f';
+ctx.fillStyle = '#090a0f';
 ctx.fillRect(-w / 2 - 2, -2, 7, 14);
 ctx.fillRect(w / 2 - 5, -2, 7, 14);
-​ctx.fillStyle = car.palette.body;
+ctx.fillStyle = car.palette.body;
 ctx.beginPath();
 ctx.roundRect(-w / 2, -h / 2, w, h, 7);
 ctx.fill();
 ctx.lineWidth = 1.5;
 ctx.strokeStyle = '#ffffff';
 ctx.stroke();
-​ctx.fillStyle = '#0f172a';
+ctx.fillStyle = '#0f172a';
 ctx.beginPath();
 ctx.roundRect(-w * 0.34, -h / 2 - 6, w * 0.68, 10, 4);
 ctx.fill();
-​ctx.fillStyle = car.palette.stripe;
+ctx.fillStyle = car.palette.stripe;
 ctx.fillRect(-6, -h / 2, 4, h);
 ctx.fillRect(2, -h / 2, 4, h);
-​ctx.fillStyle = '#18181b';
+ctx.fillStyle = '#18181b';
 ctx.fillRect(-w / 2 - 2, -4, w + 4, 4);
-​ctx.fillStyle = '#ffffff';
+ctx.fillStyle = '#ffffff';
 ctx.font = 'bold 10px "Russo One", sans-serif';
 ctx.textAlign = 'center';
 ctx.fillText(car.palette.num, 0, 9);
-​if (car.nitroTimer > 0 && car.freezeTimer <= 0) {
+if (car.nitroTimer > 0 && car.freezeTimer <= 0) {
 const fSize = 7 + Math.random() * 6;
 ctx.fillStyle = '#00d2ff';
 ctx.beginPath();
@@ -1926,7 +1926,7 @@ ctx.arc(-11, 11, fSize, 0, Math.PI * 2);
 ctx.arc(11, 11, fSize, 0, Math.PI * 2);
 ctx.fill();
 }
-​if (car.freezeTimer > 0) {
+if (car.freezeTimer > 0) {
 ctx.fillStyle = 'rgba(56, 189, 248, 0.55)';
 ctx.strokeStyle = '#e0f2fe';
 ctx.lineWidth = 2;
@@ -1935,30 +1935,30 @@ ctx.roundRect(-w / 2 - 4, -h / 2 - 8, w + 8, h + 12, 6);
 ctx.fill();
 ctx.stroke();
 }
-​if (car.shieldTimer > 0) {
+if (car.shieldTimer > 0) {
 ctx.strokeStyle = '#fbbf24';
 ctx.lineWidth = 2.5;
 ctx.beginPath();
 ctx.arc(0, 0, 30 + Math.sin(timestamp * 0.02) * 2, 0, Math.PI * 2);
 ctx.stroke();
 }
-​ctx.restore();
-​ctx.save();
+ctx.restore();
+ctx.save();
 const label = car.name.slice(0, 11);
 ctx.font = '700 10px Inter, sans-serif';
 const tw = ctx.measureText(label).width + 10;
 const py = y - 28 * scale - 12;
-​ctx.fillStyle = 'rgba(9, 10, 15, 0.85)';
+ctx.fillStyle = 'rgba(9, 10, 15, 0.85)';
 ctx.beginPath();
 ctx.roundRect(x - tw / 2, py, tw, 15, 6);
 ctx.fill();
-​ctx.fillStyle = car.freezeTimer > 0 ? '#7dd3fc' : '#ffffff';
+ctx.fillStyle = car.freezeTimer > 0 ? '#7dd3fc' : '#ffffff';
 ctx.textAlign = 'center';
 ctx.textBaseline = 'middle';
 ctx.fillText(label, x, py + 8);
 ctx.restore();
 }
-​function drawFunnelTornado(ctx, x, y, scale, timestamp) {
+function drawFunnelTornado(ctx, x, y, scale, timestamp) {
 ctx.save();
 ctx.translate(x, y);
 ctx.scale(scale, scale);
@@ -1973,74 +1973,77 @@ ctx.stroke();
 }
 ctx.restore();
 }
-​function addChatMessage(user, text, isHighlight = false) {
+function escapeHtml(value) {
+return String(value ?? '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+}
+function addChatMessage(user, text, isHighlight = false) {
 const feed = document.getElementById('live-chat-feed');
 if (!feed) return;
 if (feed.querySelector('p.italic')) feed.innerHTML = '';
 const row = document.createElement('div');
 row.className = isHighlight ? 'text-lh-cyan font-semibold' : 'text-zinc-300';
-row.innerHTML = <strong class="text-white">${user}:</strong> ${text};
+row.innerHTML = `<strong class="text-white">${escapeHtml(user)}:</strong> ${escapeHtml(text)}`;
 feed.appendChild(row);
 while (feed.children.length > 25) feed.removeChild(feed.firstChild);
 feed.scrollTop = feed.scrollHeight;
 }
-​function addRecentGiftItem(user, giftLabel, coins) {
+function addRecentGiftItem(user, giftLabel, coins) {
 const box = document.getElementById('recent-gifts-list');
 if (!box) return;
 if (box.textContent.includes('Nenhum presente')) box.innerHTML = '';
 const row = document.createElement('div');
 row.className = 'flex items-center justify-between bg-lh-bg border border-lh-border rounded-xl px-3 py-1.5';
-row.innerHTML = <span class="text-white font-semibold">${user} • <span class="text-lh-cyan">${giftLabel}</span></span><span class="text-amber-400 font-bold">+${coins}</span>;
+row.innerHTML = `<span class="text-white font-semibold">${escapeHtml(user)} • <span class="text-lh-cyan">${escapeHtml(giftLabel)}</span></span><span class="text-amber-400 font-bold">+${Number(coins) || 0}</span>`;
 box.prepend(row);
 while (box.children.length > 5) box.removeChild(box.lastChild);
 }
-​function updateMetricsUI() {
+function updateMetricsUI() {
 document.getElementById('stat-comments').textContent = appState.commentsCount;
 document.getElementById('stat-gifts').textContent = appState.giftsCount;
 document.getElementById('stat-coins').textContent = appState.coinsCount;
 document.getElementById('info-cars-count').textContent = racers.length;
 document.getElementById('info-responses-count').textContent = appState.responsesCount;
-document.getElementById('hud-racers').textContent = ${racers.length} carros;
-​const mins = Math.max(1, appState.sessionSeconds / 60);
-document.getElementById('comments-per-min').textContent = ${(appState.commentsCount / mins).toFixed(1)} comentários/min;
-​const pct = Math.min(100, Math.round((appState.coinsCount / 1000) * 100));
-document.getElementById('coin-goal-pct').textContent = ${pct}%;
-document.getElementById('coin-goal-bar').style.width = ${pct}%;
-document.getElementById('coin-goal-text').textContent = ${appState.coinsCount} / 1.000 moedas;
-​const topGiftEntry = Object.entries(appState.giftCountsMap).sort((a, b) => b[1] - a[1])[0];
+document.getElementById('hud-racers').textContent = `${racers.length} carros`;
+const mins = Math.max(1, appState.sessionSeconds / 60);
+document.getElementById('comments-per-min').textContent = `${(appState.commentsCount / mins).toFixed(1)} comentários/min`;
+const pct = Math.min(100, Math.round((appState.coinsCount / 1000) * 100));
+document.getElementById('coin-goal-pct').textContent = `${pct}%`;
+document.getElementById('coin-goal-bar').style.width = `${pct}%`;
+document.getElementById('coin-goal-text').textContent = `${appState.coinsCount} / 1.000 moedas`;
+const topGiftEntry = Object.entries(appState.giftCountsMap).sort((a, b) => b[1] - a[1])[0];
 if (topGiftEntry) {
-document.getElementById('most-sent-gift').textContent = ${topGiftEntry[0]} (${topGiftEntry[1]}x);
+document.getElementById('most-sent-gift').textContent = `${topGiftEntry[0]} (${topGiftEntry[1]}x)`;
 }
-​const rankEntries = Object.entries(appState.donorRankingMap).sort((a, b) => b[1] - a[1]).slice(0, 3);
+const rankEntries = Object.entries(appState.donorRankingMap).sort((a, b) => b[1] - a[1]).slice(0, 3);
 const rankBox = document.getElementById('gift-ranking-list');
 if (rankEntries.length > 0 && rankBox) {
-rankBox.innerHTML = rankEntries.map(([name, coins], idx) => <div class="flex items-center justify-between bg-lh-bg border border-lh-border rounded-xl px-3 py-1.5"> <span class="text-white font-semibold">${['🥇', '🥈', '🥉'][idx]} ${name}</span> <span class="text-lh-cyan font-bold">${coins} moedas</span> </div>).join('');
+rankBox.innerHTML = rankEntries.map(([name, coins], idx) => `<div class="flex items-center justify-between bg-lh-bg border border-lh-border rounded-xl px-3 py-1.5"> <span class="text-white font-semibold">${['🥇', '🥈', '🥉'][idx]} ${escapeHtml(name)}</span> <span class="text-lh-cyan font-bold">${Number(coins) || 0} moedas</span> </div>`).join('');
 }
-​const sortedCars = [...racers].sort((a, b) => b.progress - a.progress).slice(0, 3);
+const sortedCars = [...racers].sort((a, b) => b.progress - a.progress).slice(0, 3);
 const hudList = document.getElementById('hud-ranking-list');
 if (hudList) {
 if (sortedCars.length === 0) {
 hudList.innerHTML = '<li class="text-zinc-400">Largada...</li>';
 } else {
-hudList.innerHTML = sortedCars.map((c, i) => <li class="truncate font-semibold">${['🥇', '🥈', '🥉'][i]} ${c.name}</li>).join('');
+hudList.innerHTML = sortedCars.map((c, i) => `<li class="truncate font-semibold">${['🥇', '🥈', '🥉'][i]} ${escapeHtml(c.name)}</li>`).join('');
 }
 }
 }
-​function finishRaceRound() {
+function finishRaceRound() {
 appState.raceState = 'podium';
 const sorted = [...racers].sort((a, b) => b.progress - a.progress).slice(0, 3);
 const podiumList = document.getElementById('stage-podium-list');
-podiumList.innerHTML = sorted.map((c, i) => <div class="flex items-center justify-between bg-lh-card border border-lh-cyan/40 rounded-2xl px-3.5 py-2"> <span class="text-xs font-extrabold text-white">${['🥇 1º', '🥈 2º', '🥉 3º'][i]} ${c.name}</span> <span class="text-[11px] font-bold text-lh-cyan">${c.taps} taps</span> </div>).join('');
-​document.getElementById('stage-podium-overlay').classList.remove('hidden');
+podiumList.innerHTML = sorted.map((c, i) => `<div class="flex items-center justify-between bg-lh-card border border-lh-cyan/40 rounded-2xl px-3.5 py-2"> <span class="text-xs font-extrabold text-white">${['🥇 1º', '🥈 2º', '🥉 3º'][i]} ${escapeHtml(c.name)}</span> <span class="text-[11px] font-bold text-lh-cyan">${Number(c.taps) || 0} taps</span> </div>`).join('');
+document.getElementById('stage-podium-overlay').classList.remove('hidden');
 playSfx(['C5', 'E5', 'G5', 'C6'], '4n');
 if (sorted[0]) {
-speakVoice(Fim da corrida! Vitória de ${sorted[0].name}!);
+speakVoice(`Fim da corrida! Vitória de ${sorted[0].name}!`);
 }
-​setTimeout(() => {
+setTimeout(() => {
 startNewRace(false);
 }, 6000);
 }
-​function startNewRace(notify = false) {
+function startNewRace(notify = false) {
 racers = [];
 particles = [];
 appState.raceState = 'racing';
@@ -2048,26 +2051,26 @@ appState.raceTimer = 60;
 appState.tornado.active = false;
 document.getElementById('stage-podium-overlay').classList.add('hidden');
 document.getElementById('hud-timer').textContent = '60s';
-​for (let i = 0; i < 6; i++) spawnRacer();
+for (let i = 0; i < 6; i++) spawnRacer();
 updateMetricsUI();
 if (notify) showToast('🏁 Nova corrida de 1 minuto iniciada!', 'success');
 }
-​setInterval(() => {
+setInterval(() => {
 appState.sessionSeconds++;
 const hrs = String(Math.floor(appState.sessionSeconds / 3600)).padStart(2, '0');
 const mins = String(Math.floor((appState.sessionSeconds % 3600) / 60)).padStart(2, '0');
 const secs = String(appState.sessionSeconds % 60).padStart(2, '0');
 const uptimeEl = document.getElementById('session-uptime');
-if (uptimeEl) uptimeEl.textContent = ${hrs}:${mins}:${secs};
-​if (appState.isPaused) return;
-​if (appState.raceState === 'racing') {
+if (uptimeEl) uptimeEl.textContent = `${hrs}:${mins}:${secs}`;
+if (appState.isPaused) return;
+if (appState.raceState === 'racing') {
 appState.raceTimer--;
-document.getElementById('hud-timer').textContent = ${Math.max(0, appState.raceTimer)}s;
-​if (appState.raceTimer <= 0) {
+document.getElementById('hud-timer').textContent = `${Math.max(0, appState.raceTimer)}s`;
+if (appState.raceTimer <= 0) {
 finishRaceRound();
 return;
 }
-​if (appState.simulatorActive && !appState.isLiveConnected) {
+if (appState.simulatorActive && !appState.isLiveConnected) {
 const chance = appState.crowdMode === 'intenso' ? 0.85 : 0.45;
 if (Math.random() < chance) {
 const r = spawnRacer();
@@ -2081,25 +2084,25 @@ updateMetricsUI();
 }
 }
 }, 1000);
-​if (cloudSocket) {
+if (cloudSocket) {
 cloudSocket.on('tiktok_status', (data) => {
 if (data.username) {
-document.getElementById('input-tiktok-user').value = @${data.username};
+document.getElementById('input-tiktok-user').value = `@${data.username}`;
 appState.tiktokUser = data.username;
 }
 applyConnectionUIState(Boolean(data.connected), data.username || appState.tiktokUser);
 });
-​cloudSocket.on('tiktok_error', (data) => {
+cloudSocket.on('tiktok_error', (data) => {
 showToast(data.message || 'Erro ao conectar no TikTok Live.', 'info');
 });
-​cloudSocket.on('tiktok_chat', (data) => {
+cloudSocket.on('tiktok_chat', (data) => {
 const car = spawnRacer(data.nickname);
 appState.commentsCount++;
 appState.responsesCount++;
 addChatMessage(data.nickname, data.comment || 'entrou na corrida! 🏎️');
 if (car) updateMetricsUI();
 });
-​cloudSocket.on('tiktok_like', (data) => {
+cloudSocket.on('tiktok_like', (data) => {
 const car = spawnRacer(data.nickname);
 if (car && car.freezeTimer <= 0) {
 const boost = Math.min(25, data.likeCount || 1);
@@ -2110,7 +2113,7 @@ car.nitroTimer = Math.max(car.nitroTimer, 25);
 appState.responsesCount++;
 updateMetricsUI();
 });
-​cloudSocket.on('tiktok_gift', (data) => {
+cloudSocket.on('tiktok_gift', (data) => {
 const coins = data.totalCoins || 1;
 const qty = data.repeatCount || 1;
 if (coins >= 300) {
@@ -2121,13 +2124,13 @@ applyPowerUp('freeze', qty, data.nickname);
 applyPowerUp('nitro', qty, data.nickname);
 }
 });
-​cloudSocket.on('tiktok_follow', (data) => {
+cloudSocket.on('tiktok_follow', (data) => {
 const car = spawnRacer(data.nickname);
 if (car) car.nitroTimer = 95;
 addChatMessage(data.nickname, 'seguiu a live e ganhou turbo! ⭐', true);
-showPowerBanner(⭐ NOVO SEGUIDOR: ${data.nickname}, 'Ganhou arrancada extra!');
+showPowerBanner(`⭐ NOVO SEGUIDOR: ${data.nickname}`, 'Ganhou arrancada extra!');
 });
-​cloudSocket.on('remote_command', (payload) => {
+cloudSocket.on('remote_command', (payload) => {
 if (payload.type === 'testAction') {
 testAction(payload.action, true);
 } else if (payload.type === 'restartRace') {
@@ -2135,7 +2138,7 @@ startNewRace(true);
 }
 });
 }
-​window.addEventListener('resize', resizeCanvas);
+window.addEventListener('resize', resizeCanvas);
 window.onload = function () {
 resizeCanvas();
 startNewRace(false);
